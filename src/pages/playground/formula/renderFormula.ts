@@ -33,7 +33,7 @@ export function renderFormula(state: State, id: Id, formula: Formula): void {
     }
   }
 
-  state.mouseDistances.set(id, {
+  state.clickables.set(id, {
     id,
     name: formula.name,
     position: [xmin, ymin],

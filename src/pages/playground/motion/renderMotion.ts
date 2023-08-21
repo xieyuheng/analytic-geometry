@@ -35,7 +35,7 @@ export function renderMotion(state: State, id: Id, motion: Motion): void {
     }
   }
 
-  state.mouseDistances.set(id, {
+  state.clickables.set(id, {
     id,
     name: motion.name,
     position: [xmin, ymin],

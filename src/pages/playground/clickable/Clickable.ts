@@ -1,4 +1,4 @@
-export type MouseDistance = {
+export type Clickable = {
   id: string
   name: string
   distance: number

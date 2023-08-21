@@ -1,8 +1,8 @@
 import { Camera } from "./camera/Camera"
+import { Clickable } from "./clickable/Clickable"
 import { Formula } from "./formula/Formula"
 import { Id } from "./id/Id"
 import { Motion } from "./motion/Motion"
-import { MouseDistance } from "./mouse-distance/MouseDistance"
 import { Mouse } from "./mouse/Mouse"
 
 export type State = {
@@ -11,8 +11,8 @@ export type State = {
   camera: Camera
   mouse: Mouse
   idCounter: number
-  hovered?: MouseDistance
+  hovered?: Clickable
   formulas: Map<Id, Formula>
   motions: Map<Id, Motion>
-  mouseDistances: Map<Id, MouseDistance>
+  clickables: Map<Id, Clickable>
 }
