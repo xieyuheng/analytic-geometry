@@ -1,8 +1,8 @@
 # Analytic Geometry
 
-[ [Website](https://analytic-geometry.xieyuheng.com) ]
-
 A program to draw analytic geometry graphs on canvas.
+
+-> [Visit the website](https://analytic-geometry.xieyuheng.com)!
 
 ## Development
 

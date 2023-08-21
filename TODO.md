@@ -1,6 +1,8 @@
-remove other code
+move analytic-geometry/ to top level
 
 rename `MouseDistance` to `Clickable`
+
+use vue not just vite
 
 `renderButton`
 
