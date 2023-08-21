@@ -1,16 +1,8 @@
-# Graphwind
+# Analytic Geometry
 
-A library for drawing graphs on canvas.
+[ [Website](https://analytic-geometry.xieyuheng.com) ]
 
-## Usage
-
-### Install
-
-Install this library by the following command:
-
-```
-npm install @xieyuheng/graphwind
-```
+A program to draw analytic geometry graphs on canvas.
 
 ## Development
 

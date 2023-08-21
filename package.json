@@ -1,7 +1,8 @@
 {
-  "name": "graphwind",
+  "name": "analytic-geometry",
+  "private": true,
   "version": "0.0.1",
-  "repository": "github:xieyuheng/graphwind",
+  "repository": "github:xieyuheng/analytic-geometry",
   "type": "module",
   "files": [
     "lib"
