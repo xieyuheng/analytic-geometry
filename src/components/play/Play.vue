@@ -24,11 +24,6 @@ onMounted(() => {
   if (canvasElement.value && containerElement.value) {
     state.value = createState(canvasElement.value)
     resizeCanvas(state.value.canvas, containerElement.value)
-
-    state.value.camera.position = [1, 1]
-
-    // createExampleFormulas(state.value)
-    // createExampleMotions(state.value)
     trackMouse(state.value)
     stateRefresh(state.value, props.mod)
     animate(state.value)
