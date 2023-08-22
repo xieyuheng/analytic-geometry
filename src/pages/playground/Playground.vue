@@ -35,11 +35,11 @@ watch(
 
 <template>
   <div
-    class="flex overflow-auto h-screen flex-col dark:bg-stone-800 dark:text-white"
+    class="flex overflow-auto h-screen-dynamic flex-col dark:bg-stone-800 dark:text-white"
   >
     <div
       v-if="state"
-      class="flex flex-col md:h-full md:overflow-auto md:flex-row"
+      class="flex flex-col h-full md:overflow-auto md:flex-row"
     >
       <div
         class="flex flex-col overflow-auto md:w-1/3 h-full md:min-h-full min-h-[23rem]"
