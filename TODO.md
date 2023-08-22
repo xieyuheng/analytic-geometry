@@ -1,6 +1,5 @@
 # play
 
-[play] support keyboard up and down
 [play] be able to scale camera
 [play] `renderMotion` -- show motion in time
 [play] click a motion to replay it

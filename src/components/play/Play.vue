@@ -7,6 +7,7 @@ import { trackMouse } from './mouse/trackMouse'
 import { resizeCanvas } from './resizeCanvas'
 import { stateRefresh } from './stateRefresh'
 import { Mod } from './Mod'
+import { listenKeyboard } from './listenKeyboard'
 
 const props = defineProps<{
   mod: Mod
@@ -26,6 +27,7 @@ onMounted(() => {
     })
     resizeCanvas(state.value)
     trackMouse(state.value)
+    listenKeyboard(state.value)
     stateRefresh(state.value, props.mod)
     animate(state.value)
   }
@@ -43,6 +45,6 @@ watch(
 
 <template>
   <div class="h-full w-full" ref="containerElement">
-    <canvas class="block" ref="canvasElement"></canvas>
+    <canvas @click="canvasElement?.focus()" tabindex="1" ref="canvasElement"></canvas>
   </div>
 </template>

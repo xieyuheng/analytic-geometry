@@ -34,7 +34,7 @@ export function animate(state: State, passedTime?: number): void {
 
   renderController(state)
 
-  const clickPeriod = 200
+  const clickPeriod = 120
   if (state.mouse.isDown && state.clickCoollingTimer <= 0) {
     onClick(state)
     state.clickCoollingTimer = clickPeriod
