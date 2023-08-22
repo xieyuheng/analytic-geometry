@@ -5,7 +5,7 @@ import { adjustCamera } from './camera/adjustCamera'
 import { drawText } from './drawText'
 
 export function renderHoveredPoint(state: State): void {
-  if (state.hovered === undefined) {
+  if (state.HoveredPoint === undefined) {
     return
   }
 
@@ -15,12 +15,12 @@ export function renderHoveredPoint(state: State): void {
 
   state.ctx.beginPath()
 
-  const x = state.hovered.position[0]
-  const y = state.hovered.position[1]
+  const x = state.HoveredPoint.position[0]
+  const y = state.HoveredPoint.position[1]
 
   const xText = `x: ${numberOmitAfterFloatPoint(x, 0.001)}`
   const yText = `y: ${numberOmitAfterFloatPoint(y, 0.001)}`
-  const description = state.hovered.description || ''
+  const description = state.HoveredPoint.description || ''
 
   const descriptionMetrics = state.ctx.measureText(description)
   const xTextMetrics = state.ctx.measureText(xText)

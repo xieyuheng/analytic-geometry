@@ -13,7 +13,7 @@ export function renderFormula(
   const [width] = adjustCamera(state)
 
   state.ctx.strokeStyle = formula.color || 'black'
-  state.ctx.lineWidth = id === state.hovered?.id ? 1 / 12 : 1 / 20
+  state.ctx.lineWidth = id === state.HoveredPoint?.id ? 1 / 12 : 1 / 20
   const precision = formula.precision || 0.1
 
   let xmin = 0

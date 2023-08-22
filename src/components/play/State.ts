@@ -13,7 +13,7 @@ export type State = {
   camera: Camera
   mouse: Mouse
   idCounter: number
-  hovered?: HoverablePoint
+  HoveredPoint?: HoverablePoint
   formulas: Map<string, Formula>
   motions: Map<string, Motion>
   hoverablePoints: Map<string, HoverablePoint>
