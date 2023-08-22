@@ -1,11 +1,5 @@
 import { State } from '../State'
-
-export type BoxRegion = {
-  lowX: number
-  lowY: number
-  highX: number
-  highY: number
-}
+import { BoxRegion } from './BoxRegion'
 
 export type Button = {
   boxRegion: BoxRegion

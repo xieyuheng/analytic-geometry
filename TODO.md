@@ -1,6 +1,5 @@
 # play
 
-[play] `onClick` -- call all matched buttons
 [play] `renderController`
 [play] be able to move camera
 [play] be able to scale camera
