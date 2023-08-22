@@ -1,23 +1,9 @@
-import { resolve } from "node:path"
+import vue from "@vitejs/plugin-vue"
 import { defineConfig } from "vite"
 
-const inputFiles = [
-  "index.html",
-]
-
-function buildInput() {
-  return Object.fromEntries(
-    inputFiles.map((file) => [file, resolve(__dirname, file)]),
-  )
-}
-
+// https://vitejs.dev/config/
 export default defineConfig({
-  build: {
-    sourcemap: true,
-    rollupOptions: {
-      input: buildInput(),
-    },
-  },
+  plugins: [vue()],
   test: {
     coverage: {
       provider: "istanbul",

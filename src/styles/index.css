@@ -1,0 +1,6 @@
+@import './tailwind.css';
+@import './height.css' layer(base);
+
+.text-balance {
+  text-wrap: balance;
+}
