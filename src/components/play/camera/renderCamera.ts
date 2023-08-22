@@ -13,13 +13,13 @@ export function renderCamera(state: State): void {
 
   state.ctx.beginPath()
   state.ctx.moveTo(0, 0)
-  state.ctx.lineTo(0, 1)
+  state.ctx.lineTo(0, 0.5)
   state.ctx.moveTo(0, 0)
-  state.ctx.lineTo(1, 0)
+  state.ctx.lineTo(0.5, 0)
   state.ctx.moveTo(0, 0)
-  state.ctx.lineTo(0, -1)
+  state.ctx.lineTo(0, -0.5)
   state.ctx.moveTo(0, 0)
-  state.ctx.lineTo(-1, 0)
+  state.ctx.lineTo(-0.5, 0)
   state.ctx.stroke()
 
   state.ctx.restore()
