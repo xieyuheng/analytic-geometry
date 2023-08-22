@@ -30,6 +30,6 @@ export function createState(options: StateOptions): State {
     idCounter: 0,
     formulas: new Map(),
     motions: new Map(),
-    clickables: new Map(),
+    hoverablePoints: new Map(),
   }
 }

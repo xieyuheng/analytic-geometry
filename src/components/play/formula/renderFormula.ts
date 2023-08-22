@@ -37,7 +37,7 @@ export function renderFormula(
     }
   }
 
-  state.clickables.set(id, {
+  state.hoverablePoints.set(id, {
     id,
     description: formula.description,
     position: [xmin, ymin],

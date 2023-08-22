@@ -1,4 +1,4 @@
-export type Clickable = {
+export type HoverablePoint = {
   id: string
   description?: string
   distance: number

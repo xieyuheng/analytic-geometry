@@ -1,10 +1,10 @@
 import { State } from './State'
 import { renderCamera } from './camera/renderCamera'
-import { updateHovered } from './clickable/updateHovered'
 import { renderFormula } from './formula/renderFormula'
+import { updateHovered } from './hoverable-point/updateHovered'
 import { renderMotion } from './motion/renderMotion'
 import { renderCoordinate } from './renderCoordinate'
-import { renderHovered } from './renderHovered'
+import { renderHoveredPoint } from './renderHoveredPoint'
 import { renderInfo } from './renderInfo'
 
 export function animate(state: State): void {
@@ -21,7 +21,7 @@ export function animate(state: State): void {
   }
 
   updateHovered(state)
-  renderHovered(state)
+  renderHoveredPoint(state)
 
   renderCamera(state)
   renderInfo(state)

@@ -36,7 +36,7 @@ export function renderMotion(state: State, id: string, motion: Motion): void {
     }
   }
 
-  state.clickables.set(id, {
+  state.hoverablePoints.set(id, {
     id,
     description: motion.description,
     position: [xmin, ymin],

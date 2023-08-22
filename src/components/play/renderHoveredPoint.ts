@@ -4,7 +4,7 @@ import { State } from './State'
 import { adjustCamera } from './camera/adjustCamera'
 import { drawText } from './drawText'
 
-export function renderHovered(state: State): void {
+export function renderHoveredPoint(state: State): void {
   if (state.hovered === undefined) {
     return
   }

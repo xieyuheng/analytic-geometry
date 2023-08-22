@@ -6,7 +6,7 @@ import { createMotion } from './motion/createMotion'
 export function stateRefresh(state: State, mod: Mod): void {
   state.formulas = new Map()
   state.motions = new Map()
-  state.clickables = new Map()
+  state.hoverablePoints = new Map()
 
   for (const formula of mod.formulas) {
     createFormula(state, formula)
