@@ -1,8 +1,19 @@
-extract code about canvas to `components/play/Play`
+# play
+
+[play] inline `main`
 
 # playground
 
-[playground] add editor to playground -- eval js code to build entities
+[playground] `PlaygroundEditor`
+[playground] `PlaygroundToolbar`
+[playground] `PlaygroundNavbar`
+[playground] `PlaygroundPlay`
+[playground] `PlaygroundError`
+
+[playground] eval js code to build entities
+
+- `defineMotion`
+- `defineFormula`
 
 # play
 
