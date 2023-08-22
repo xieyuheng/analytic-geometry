@@ -1,6 +1,6 @@
 export type Clickable = {
   id: string
-  name: string
+  description?: string
   distance: number
   position: [number, number]
 }

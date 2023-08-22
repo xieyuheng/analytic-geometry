@@ -9,15 +9,17 @@ export function renderMotion(state: State, id: Id, motion: Motion): void {
 
   adjustCamera(state.ctx, state.camera)
 
-  state.ctx.strokeStyle = motion.color
+  state.ctx.strokeStyle = motion.color || 'black'
   state.ctx.lineWidth = id === state.hovered?.id ? 1 / 12 : 1 / 20
+
+  const precision = motion.precision || 0.1
 
   let xmin = 0
   let ymin = 0
   let distance = Infinity
-  for (let t = motion.range[0]; t < motion.range[1]; t += motion.precision) {
+  for (let t = motion.range[0]; t < motion.range[1]; t += precision) {
     const t0 = t
-    const t1 = t + motion.precision
+    const t1 = t + precision
     const x0 = motion.x(t0)
     const x1 = motion.x(t1)
     const y0 = motion.y(t0)
@@ -37,7 +39,7 @@ export function renderMotion(state: State, id: Id, motion: Motion): void {
 
   state.clickables.set(id, {
     id,
-    name: motion.name,
+    description: motion.description,
     position: [xmin, ymin],
     distance,
   })

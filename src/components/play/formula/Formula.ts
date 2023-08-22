@@ -1,6 +1,6 @@
 export type Formula = {
-  name: string
   f: (x: number) => number
-  precision: number
-  color: string
+  precision?: number
+  color?: string
+  description?: string
 }

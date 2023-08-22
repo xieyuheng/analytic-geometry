@@ -4,23 +4,20 @@ import { createFormula } from './formula/createFormula'
 
 export function createExampleFormulas(state: State): void {
   createFormula(state, {
-    name: 'sin',
+    description: 'sin',
     f: (x) => Math.sin(x),
-    precision: 0.1,
     color: colors.rose[400],
   })
 
   createFormula(state, {
-    name: 'x ** 2',
+    description: 'x ** 2',
     f: (x) => x ** 2,
-    precision: 0.1,
     color: colors.rose[400],
   })
 
   createFormula(state, {
-    name: 'x * sin(x)',
+    description: 'x * sin(x)',
     f: (x) => x * Math.sin(x),
-    precision: 0.1,
     color: colors.rose[400],
   })
 }

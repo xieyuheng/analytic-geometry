@@ -1,3 +1,8 @@
+# play
+
+[play] `Play` take `mod` and `tick` as props
+[play] `Play` build `State` from `mod` -- state no need to have `mod`
+
 # playground
 
 [playground] fix `stateReload` -- eval js code to build entities
@@ -6,8 +11,6 @@
 - `defineFormula`
 
 # play
-
-[play] `Play` take `mod` and `tick` as props
 
 [play] be able to move camera
 [play] be able to scale camera

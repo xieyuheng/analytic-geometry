@@ -18,16 +18,16 @@ export function renderHovered(state: State): void {
   const x = state.hovered.position[0]
   const y = state.hovered.position[1]
 
-  const nameText = state.hovered.name
   const xText = `x: ${numberOmitAfterFloatPoint(x, 0.001)}`
   const yText = `y: ${numberOmitAfterFloatPoint(y, 0.001)}`
+  const description = state.hovered.description || ''
 
-  const nameTextMetrics = state.ctx.measureText(nameText)
+  const descriptionMetrics = state.ctx.measureText(description)
   const xTextMetrics = state.ctx.measureText(xText)
   const yTextMetrics = state.ctx.measureText(yText)
 
   const maxWidth = Math.max(
-    nameTextMetrics.width,
+    descriptionMetrics.width,
     xTextMetrics.width,
     yTextMetrics.width,
   )
@@ -46,7 +46,9 @@ export function renderHovered(state: State): void {
   state.ctx.fillStyle = 'black'
   drawText(state, xText, [x + 0.1, y + 0.2], { fontScale: 2 })
   drawText(state, yText, [x + 0.1, y + 0.2 + 0.8], { fontScale: 2 })
-  drawText(state, nameText, [x + 0.1, y + 0.2 + 0.8 * 2], { fontScale: 2 })
+  drawText(state, description, [x + 0.1, y + 0.2 + 0.8 * 2], {
+    fontScale: 2,
+  })
 
   state.ctx.fillStyle = colors.rose[400]
   state.ctx.arc(x, y, 0.2, 0, Math.PI * 2)

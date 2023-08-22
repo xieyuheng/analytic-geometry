@@ -9,15 +9,16 @@ export function renderFormula(state: State, id: Id, formula: Formula): void {
 
   const [width] = adjustCamera(state.ctx, state.camera)
 
-  state.ctx.strokeStyle = formula.color
+  state.ctx.strokeStyle = formula.color || 'black'
   state.ctx.lineWidth = id === state.hovered?.id ? 1 / 12 : 1 / 20
+  const precision = formula.precision || 0.1
 
   let xmin = 0
   let ymin = 0
   let distance = Infinity
-  for (let x = -width / 2; x < width / 2 + 1; x += formula.precision) {
+  for (let x = -width / 2; x < width / 2 + 1; x += precision) {
     const x0 = x
-    const x1 = x + formula.precision
+    const x1 = x + precision
     const y0 = formula.f(x0)
     const y1 = formula.f(x1)
     state.ctx.beginPath()
@@ -35,7 +36,7 @@ export function renderFormula(state: State, id: Id, formula: Formula): void {
 
   state.clickables.set(id, {
     id,
-    name: formula.name,
+    description: formula.description,
     position: [xmin, ymin],
     distance,
   })

@@ -6,17 +6,16 @@ import { createMotion } from './motion/createMotion'
 
 export function createExampleMotions(state: State): void {
   createMotion(state, {
-    name: 'Circle of radian 3.',
+    description: 'Circle of radian 3.',
     x: (t) => Math.sin(t) * 3,
     y: (t) => Math.cos(t) * 3,
     range: [0, Math.PI * 2],
-    precision: 0.1,
     color: colors.orange[400],
   })
 
   // https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)
   createMotion(state, {
-    name: 'Butterfly curve.',
+    description: 'Butterfly curve.',
     x: (t) =>
       5 *
       Math.sin(t) *
