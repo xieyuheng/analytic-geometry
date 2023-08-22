@@ -72,12 +72,6 @@ async function share() {
         <template #zh> 运行 </template>
         <template #en> Run </template>
       </Lang>
-
-      <span
-        v-if="timeUsedToRun"
-        class="text-stone-500 dark:text-stone-300 text-base"
-        >({{ Math.floor(timeUsedToRun) }} ms)</span
-      >
     </button>
   </div>
 </template>
