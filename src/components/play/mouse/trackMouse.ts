@@ -1,16 +1,16 @@
 import { State } from '../State'
 import { transformPoint } from '../camera/transformPoint'
 
-export function trackMouse(state: State) {
-  window.addEventListener('mousedown', (event) => {
+export function trackMouse(state: State, containerElement: HTMLElement) {
+  containerElement.addEventListener('mousedown', (event) => {
     state.mouse.isDown = true
   })
 
-  window.addEventListener('mouseup', (event) => {
+  containerElement.addEventListener('mouseup', (event) => {
     state.mouse.isDown = false
   })
 
-  window.addEventListener('mousemove', (event) => {
+  containerElement.addEventListener('mousemove', (event) => {
     state.mouse.position = transformPoint(state.canvas, state.camera, [
       event.x,
       event.y,
