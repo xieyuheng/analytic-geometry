@@ -26,17 +26,15 @@ export function animate(state: State, passedTime?: number): void {
     renderMotion(state, id, motion)
   }
 
-  updateHovered(state)
-
   const clickPeriod = 120
   if (state.mouse.isDown && state.clickCoollingTimer <= 0) {
-    state.hoveredPoint = undefined
     onClick(state)
     state.clickCoollingTimer = clickPeriod
   } else if (state.clickCoollingTimer > 0) {
     state.clickCoollingTimer -= deltaTime
   }
 
+  updateHovered(state)
   if (state.hoveredPoint) {
     renderHoveredPoint(state, state.hoveredPoint)
   }
