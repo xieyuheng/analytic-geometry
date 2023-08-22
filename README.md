@@ -4,9 +4,9 @@ A program to draw analytic geometry graphs on canvas.
 
 ## Usage
 
-### `colors`
-
 We can write JavaScript code in the playground.
+
+### `colors`
 
 Use `colors` to specify color of graph.
 
