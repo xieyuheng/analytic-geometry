@@ -1,12 +1,13 @@
-add editor to playground -- eval js code to build entities
+extract code about canvas to `components/play/Play`
 
-[control] be able to move camera
-[control] be able to scale camera
+# playground
 
-`renderMotion` -- show motion in time
+[playground] add editor to playground -- eval js code to build entities
 
-click a motion to replay it
+# play
 
-[control] be able to control the play of motion
-
-`renderButton`
+[play] be able to move camera
+[play] be able to scale camera
+[play] `renderMotion` -- show motion in time
+[play] click a motion to replay it
+[play] be able to control the play of motion
