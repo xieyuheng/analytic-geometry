@@ -4,11 +4,15 @@ A program to draw analytic geometry graphs on canvas.
 
 ## Usage
 
+### `colors`
+
 We can write JavaScript code in the playground.
 
 Use `colors` to specify color of graph.
 
 - We use [tailwindcss colors themes](https://tailwindcss.com/docs/customizing-colors).
+
+### `createFormula`
 
 Use `createFormula` to add formulas:
 
@@ -34,7 +38,9 @@ createFormula({
 })
 ```
 
-Use `createMotions**` to add motions:
+### `createMotions`
+
+Use `createMotions` to add motions:
 
 [ [Open in Playground](https://analytic-geometry.xieyuheng.com/playground/Y3JlYXRlTW90aW9uKHsKICBkZXNjcmlwdGlvbjogJ0NpcmNsZSBvZiByYWRpYW4gMy4nLAogIHg6ICh0KSA9PiBNYXRoLnNpbih0KSAqIDMsCiAgeTogKHQpID0-IE1hdGguY29zKHQpICogMywKICByYW5nZTogWzAsIE1hdGguUEkgKiAyXSwKICBjb2xvcjogY29sb3JzLm9yYW5nZVs0MDBdLAp9KQoKLy8gaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQnV0dGVyZmx5X2N1cnZlXyh0cmFuc2NlbmRlbnRhbCkKCmNyZWF0ZU1vdGlvbih7CiAgZGVzY3JpcHRpb246ICdCdXR0ZXJmbHkgY3VydmUuJywKICB4OiAodCkgPT4KICAgIDUgKgogICAgTWF0aC5zaW4odCkgKgogICAgKE1hdGguRSAqKiBNYXRoLmNvcyh0KSAtCiAgICAgIDIgKiBNYXRoLmNvcyg0ICogdCkgLQogICAgICBNYXRoLnNpbihNYXRoLnNpbihNYXRoLnNpbihNYXRoLnNpbihNYXRoLnNpbih0IC8gMTIpKSkpKSksCiAgeTogKHQpID0-CiAgICA1ICoKICAgIE1hdGguY29zKHQpICoKICAgIChNYXRoLkUgKiogTWF0aC5jb3ModCkgLQogICAgICAyICogTWF0aC5jb3MoNCAqIHQpIC0KICAgICAgTWF0aC5zaW4oTWF0aC5zaW4oTWF0aC5zaW4oTWF0aC5zaW4oTWF0aC5zaW4odCAvIDEyKSkpKSkpLAogIHJhbmdlOiBbMCwgTWF0aC5QSSAqIDEyXSwKICBwcmVjaXNpb246IDAuMDEsCiAgY29sb3I6IGNvbG9ycy5vcmFuZ2VbNDAwXSwKfSk) ]
 
