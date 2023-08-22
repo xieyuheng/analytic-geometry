@@ -1,8 +1,6 @@
 # playground
 
-[playground] `PlaygroundError`
 [playground] fix `stateReload`
-
 
 [playground] eval js code to build entities
 

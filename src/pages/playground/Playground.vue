@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import PlaygroundEditor from './PlaygroundEditor.vue'
+import PlaygroundError from './PlaygroundError.vue'
 import debounce from 'lodash/debounce'
 import { Base64 } from 'js-base64'
 import PlaygroundPlay from './PlaygroundPlay.vue'
@@ -57,6 +58,11 @@ watch(
         class="md:border-l grow-1 flex flex-col md:min-h-full min-h-[23rem] overflow-auto h-full border-black dark:border-white md:w-2/3"
       >
         <PlaygroundPlay v-if="state.kind === 'Play'" :state="state" />
+
+        <PlaygroundError
+          v-if="state.errorMessage && state.kind === 'Error'"
+          :state="state"
+        />
       </div>
     </div>
   </div>
