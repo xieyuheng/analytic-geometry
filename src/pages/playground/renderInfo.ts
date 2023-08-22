@@ -1,7 +1,7 @@
-import { numberOmitAfterFloatPoint } from "../../utils/numberOmitAfterFloatPoint"
-import { State } from "./State"
-import { adjustCamera } from "./camera/adjustCamera"
-import { drawTextOverCamera } from "./drawTextOverCamera"
+import { numberOmitAfterFloatPoint } from '../../utils/numberOmitAfterFloatPoint'
+import { State } from './State'
+import { adjustCamera } from './camera/adjustCamera'
+import { drawTextOverCamera } from './drawTextOverCamera'
 
 export function renderInfo(state: State): void {
   state.ctx.save()
@@ -17,7 +17,7 @@ export function renderInfo(state: State): void {
     [-width / 2 + 0.3, height / 2 - 0.2],
     {
       fontScale: 1.8,
-      textBaseline: "hanging",
+      textBaseline: 'hanging',
     },
   )
   drawTextOverCamera(
@@ -26,7 +26,7 @@ export function renderInfo(state: State): void {
     [-width / 2 + 0.3, height / 2 - 0.9],
     {
       fontScale: 1.8,
-      textBaseline: "hanging",
+      textBaseline: 'hanging',
     },
   )
 

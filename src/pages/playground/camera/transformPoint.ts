@@ -1,4 +1,4 @@
-import { Camera } from "./Camera"
+import { Camera } from './Camera'
 
 export function transformPoint(
   canvas: HTMLCanvasElement,

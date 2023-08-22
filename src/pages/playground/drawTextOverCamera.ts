@@ -1,6 +1,6 @@
-import { Vector, vectorAdd } from "../../utils/vector"
-import { State } from "./State"
-import { drawText } from "./drawText"
+import { Vector, vectorAdd } from '../../utils/vector'
+import { State } from './State'
+import { drawText } from './drawText'
 
 // Assume the `adjustCamera` is called.
 

@@ -1,4 +1,4 @@
-import { Vector } from "./Vector"
+import { Vector } from './Vector'
 
 export function vectorMulScalar(x: Vector, s: number): Vector {
   const z: Vector = []

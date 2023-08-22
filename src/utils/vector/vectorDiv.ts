@@ -1,4 +1,4 @@
-import { Vector } from "./Vector"
+import { Vector } from './Vector'
 
 export function vectorDiv(x: Vector, y: Vector): Vector {
   if (x.length !== y.length) {
@@ -8,7 +8,7 @@ export function vectorDiv(x: Vector, y: Vector): Vector {
         ``,
         `  x.length: ${x.length}`,
         `  y.length: ${y.length}`,
-      ].join("\n"),
+      ].join('\n'),
     )
   }
 

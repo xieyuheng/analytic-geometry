@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Head } from "@vueuse/head"
+import { Head } from '@vueuse/head'
 </script>
 
 <template>

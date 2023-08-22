@@ -1,8 +1,8 @@
-import { vectorDistance } from "../../../utils/vector"
-import { State } from "../State"
-import { adjustCamera } from "../camera/adjustCamera"
-import { Id } from "../id/Id"
-import { Formula } from "./Formula"
+import { vectorDistance } from '../../../utils/vector'
+import { State } from '../State'
+import { adjustCamera } from '../camera/adjustCamera'
+import { Id } from '../id/Id'
+import { Formula } from './Formula'
 
 export function renderFormula(state: State, id: Id, formula: Formula): void {
   state.ctx.save()

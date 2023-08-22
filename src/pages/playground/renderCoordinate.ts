@@ -1,12 +1,12 @@
-import { State } from "./State"
-import { adjustCamera } from "./camera/adjustCamera"
+import { State } from './State'
+import { adjustCamera } from './camera/adjustCamera'
 
 export function renderCoordinate(state: State): void {
   state.ctx.save()
 
   const [width, height] = adjustCamera(state.ctx, state.camera)
 
-  state.ctx.strokeStyle = "hsla(240, 100%, 50%, 50%)"
+  state.ctx.strokeStyle = 'hsla(240, 100%, 50%, 50%)'
   state.ctx.lineWidth = 1 / 30
 
   for (let x = Math.floor(-width / 2); x <= Math.ceil(width / 2); x += 1) {

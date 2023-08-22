@@ -1,5 +1,5 @@
-import { Vector } from "../../utils/vector"
-import { State } from "./State"
+import { Vector } from '../../utils/vector'
+import { State } from './State'
 
 // Assume the `adjustCamera` is called.
 
@@ -13,7 +13,6 @@ export function drawText(
   },
 ): void {
   const fontScale = options.fontScale || 1
-
 
   state.ctx.save()
 

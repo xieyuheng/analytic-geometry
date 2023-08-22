@@ -1,4 +1,4 @@
-import { Vector } from "."
+import { Vector } from '.'
 
 export function vectorDistance(x: Vector, y: Vector): number {
   if (x.length !== y.length) {
@@ -8,7 +8,7 @@ export function vectorDistance(x: Vector, y: Vector): number {
         ``,
         `  x.length: ${x.length}`,
         `  y.length: ${y.length}`,
-      ].join("\n"),
+      ].join('\n'),
     )
   }
 

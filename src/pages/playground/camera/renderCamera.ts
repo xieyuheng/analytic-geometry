@@ -1,6 +1,6 @@
-import { State } from "../State"
-import { adjustCamera } from "./adjustCamera"
-import { moveToCamera } from "./moveToCamera"
+import { State } from '../State'
+import { adjustCamera } from './adjustCamera'
+import { moveToCamera } from './moveToCamera'
 
 export function renderCamera(state: State): void {
   state.ctx.save()
@@ -8,7 +8,7 @@ export function renderCamera(state: State): void {
   adjustCamera(state.ctx, state.camera)
   moveToCamera(state.ctx, state.camera)
 
-  state.ctx.strokeStyle = "hsla(20, 100%, 50%, 50%)"
+  state.ctx.strokeStyle = 'hsla(20, 100%, 50%, 50%)'
   state.ctx.lineWidth = 1 / 20
 
   state.ctx.beginPath()

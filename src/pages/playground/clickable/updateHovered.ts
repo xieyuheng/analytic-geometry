@@ -1,4 +1,4 @@
-import { State } from "../State"
+import { State } from '../State'
 
 export function updateHovered(state: State): void {
   state.hovered = undefined

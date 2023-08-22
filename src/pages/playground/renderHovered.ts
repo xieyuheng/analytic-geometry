@@ -1,8 +1,8 @@
-import colors from "tailwindcss/colors"
-import { numberOmitAfterFloatPoint } from "../../utils/numberOmitAfterFloatPoint"
-import { State } from "./State"
-import { adjustCamera } from "./camera/adjustCamera"
-import { drawText } from "./drawText"
+import colors from 'tailwindcss/colors'
+import { numberOmitAfterFloatPoint } from '../../utils/numberOmitAfterFloatPoint'
+import { State } from './State'
+import { adjustCamera } from './camera/adjustCamera'
+import { drawText } from './drawText'
 
 export function renderHovered(state: State): void {
   if (state.hovered === undefined) {
@@ -40,10 +40,10 @@ export function renderHovered(state: State): void {
   state.ctx.lineWidth = 1 / 10
   state.ctx.strokeRect(x, y, boxWidth, boxHeight)
 
-  state.ctx.fillStyle = "white"
+  state.ctx.fillStyle = 'white'
   state.ctx.fillRect(x, y, boxWidth, boxHeight)
 
-  state.ctx.fillStyle = "black"
+  state.ctx.fillStyle = 'black'
   drawText(state, xText, [x + 0.1, y + 0.2], { fontScale: 2 })
   drawText(state, yText, [x + 0.1, y + 0.2 + 0.8], { fontScale: 2 })
   drawText(state, nameText, [x + 0.1, y + 0.2 + 0.8 * 2], { fontScale: 2 })

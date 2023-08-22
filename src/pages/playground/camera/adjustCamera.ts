@@ -1,5 +1,5 @@
-import { Vector } from "../../../utils/vector"
-import { Camera } from "./Camera"
+import { Vector } from '../../../utils/vector'
+import { Camera } from './Camera'
 
 export function adjustCamera(
   ctx: CanvasRenderingContext2D,

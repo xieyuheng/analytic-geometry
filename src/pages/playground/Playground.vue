@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue"
-import { main } from "./main"
+import { onMounted, ref } from 'vue'
+import { main } from './main'
 
 const containerElement = ref<HTMLDivElement | undefined>(undefined)
 const canvasElement = ref<HTMLCanvasElement | undefined>(undefined)

@@ -1,4 +1,4 @@
-import { Vector } from "../../../utils/vector/Vector"
+import { Vector } from '../../../utils/vector/Vector'
 
 export type Camera = {
   position: Vector

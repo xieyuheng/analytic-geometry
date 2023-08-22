@@ -1,8 +1,8 @@
-import { vectorDistance } from "../../../utils/vector"
-import { State } from "../State"
-import { adjustCamera } from "../camera/adjustCamera"
-import { Id } from "../id/Id"
-import { Motion } from "./Motion"
+import { vectorDistance } from '../../../utils/vector'
+import { State } from '../State'
+import { adjustCamera } from '../camera/adjustCamera'
+import { Id } from '../id/Id'
+import { Motion } from './Motion'
 
 export function renderMotion(state: State, id: Id, motion: Motion): void {
   state.ctx.save()

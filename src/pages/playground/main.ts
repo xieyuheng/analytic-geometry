@@ -1,9 +1,9 @@
-import { animate } from "./animate"
-import { createExampleFormulas } from "./createExampleFormulas"
-import { createExampleMotions } from "./createExampleMotions"
-import { createState } from "./createState"
-import { trackMouse } from "./mouse/trackMouse"
-import { resizeCanvas } from "./resizeCanvas"
+import { animate } from './animate'
+import { createExampleFormulas } from './createExampleFormulas'
+import { createExampleMotions } from './createExampleMotions'
+import { createState } from './createState'
+import { trackMouse } from './mouse/trackMouse'
+import { resizeCanvas } from './resizeCanvas'
 
 export function main(canvas: HTMLCanvasElement): void {
   const state = createState(canvas)
