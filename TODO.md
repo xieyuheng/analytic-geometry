@@ -1,7 +1,3 @@
-# play
-
-[play] inline `main`
-
 # playground
 
 [playground] `PlaygroundEditor`

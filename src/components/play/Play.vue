@@ -1,13 +1,29 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { main } from './main'
+import { State } from './State'
+import { animate } from './animate'
+import { createExampleFormulas } from './createExampleFormulas'
+import { createExampleMotions } from './createExampleMotions'
+import { createState } from './createState'
+import { trackMouse } from './mouse/trackMouse'
+import { resizeCanvas } from './resizeCanvas'
+
+const state = ref<State | undefined>(undefined)
 
 const containerElement = ref<HTMLDivElement | undefined>(undefined)
 const canvasElement = ref<HTMLCanvasElement | undefined>(undefined)
 
 onMounted(() => {
   if (canvasElement.value) {
-    main(canvasElement.value)
+    state.value = createState(canvasElement.value)
+    resizeCanvas(state.value.canvas)
+
+    state.value.camera.position = [1, 1]
+
+    createExampleFormulas(state.value)
+    createExampleMotions(state.value)
+    trackMouse(state.value)
+    animate(state.value)
   }
 })
 </script>
