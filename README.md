@@ -42,7 +42,7 @@ createFormula({
 
 Use `createMotions` to add motions:
 
-[ [Open in Playground](https://analytic-geometry.xieyuheng.com/playground/Y3JlYXRlTW90aW9uKHsKICBkZXNjcmlwdGlvbjogJ0NpcmNsZSBvZiByYWRpYW4gMy4nLAogIHg6ICh0KSA9PiBNYXRoLnNpbih0KSAqIDMsCiAgeTogKHQpID0-IE1hdGguY29zKHQpICogMywKICByYW5nZTogWzAsIE1hdGguUEkgKiAyXSwKICBjb2xvcjogY29sb3JzLm9yYW5nZVs0MDBdLAp9KQoKLy8gaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQnV0dGVyZmx5X2N1cnZlXyh0cmFuc2NlbmRlbnRhbCkKCmNyZWF0ZU1vdGlvbih7CiAgZGVzY3JpcHRpb246ICdCdXR0ZXJmbHkgY3VydmUuJywKICB4OiAodCkgPT4KICAgIDUgKgogICAgTWF0aC5zaW4odCkgKgogICAgKE1hdGguRSAqKiBNYXRoLmNvcyh0KSAtCiAgICAgIDIgKiBNYXRoLmNvcyg0ICogdCkgLQogICAgICBNYXRoLnNpbihNYXRoLnNpbihNYXRoLnNpbihNYXRoLnNpbihNYXRoLnNpbih0IC8gMTIpKSkpKSksCiAgeTogKHQpID0-CiAgICA1ICoKICAgIE1hdGguY29zKHQpICoKICAgIChNYXRoLkUgKiogTWF0aC5jb3ModCkgLQogICAgICAyICogTWF0aC5jb3MoNCAqIHQpIC0KICAgICAgTWF0aC5zaW4oTWF0aC5zaW4oTWF0aC5zaW4oTWF0aC5zaW4oTWF0aC5zaW4odCAvIDEyKSkpKSkpLAogIHJhbmdlOiBbMCwgTWF0aC5QSSAqIDEyXSwKICBwcmVjaXNpb246IDAuMDEsCiAgY29sb3I6IGNvbG9ycy5vcmFuZ2VbNDAwXSwKfSk) ]
+[ [Open in Playground](https://analytic-geometry.xieyuheng.com/playground/Y3JlYXRlTW90aW9uKHsKICBkZXNjcmlwdGlvbjogJ0NpcmNsZSBvZiByYWRpYW4gMy4nLAogIHg6ICh0KSA9PiBNYXRoLnNpbih0KSAqIDMsCiAgeTogKHQpID0-IE1hdGguY29zKHQpICogMywKICByYW5nZTogWzAsIE1hdGguUEkgKiAyXSwKICBjb2xvcjogY29sb3JzLm9yYW5nZVs0MDBdLAp9KQoKLy8gaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQnV0dGVyZmx5X2N1cnZlXyh0cmFuc2NlbmRlbnRhbCkKCmNvbnN0IHNpbjV0aW1lcyA9IAogICh0KSA9PiBNYXRoLnNpbihNYXRoLnNpbihNYXRoLnNpbihNYXRoLnNpbihNYXRoLnNpbih0KSkpKSkKCmNyZWF0ZU1vdGlvbih7CiAgZGVzY3JpcHRpb246ICdCdXR0ZXJmbHkgY3VydmUuJywKICB4OiAodCkgPT4KICAgIDQgKgogICAgTWF0aC5zaW4odCkgKgogICAgKE1hdGguRSAqKiBNYXRoLmNvcyh0KSAtCiAgICAgIDIgKiBNYXRoLmNvcyg0ICogdCkgLQogICAgICBzaW41dGltZXModCAvIDEyKSksCiAgeTogKHQpID0-CiAgICAzICoKICAgIE1hdGguY29zKHQpICoKICAgIChNYXRoLkUgKiogTWF0aC5jb3ModCkgLQogICAgICAyICogTWF0aC5jb3MoNCAqIHQpIC0KICAgICAgc2luNXRpbWVzKHQgLyAxMikpLAogIHJhbmdlOiBbMCwgTWF0aC5QSSAqIDEyXSwKICBwcmVjaXNpb246IDAuMDEsCiAgY29sb3I6IGNvbG9ycy5vcmFuZ2VbNDAwXSwKfSk) ]
 
 ```js
 createMotion({
@@ -55,20 +55,23 @@ createMotion({
 
 // https://en.wikipedia.org/wiki/Butterfly_curve_(transcendental)
 
+const sin5times = 
+  (t) => Math.sin(Math.sin(Math.sin(Math.sin(Math.sin(t)))))
+
 createMotion({
   description: 'Butterfly curve.',
   x: (t) =>
-    5 *
+    4 *
     Math.sin(t) *
     (Math.E ** Math.cos(t) -
       2 * Math.cos(4 * t) -
-      Math.sin(Math.sin(Math.sin(Math.sin(Math.sin(t / 12)))))),
+      sin5times(t / 12)),
   y: (t) =>
-    5 *
+    3 *
     Math.cos(t) *
     (Math.E ** Math.cos(t) -
       2 * Math.cos(4 * t) -
-      Math.sin(Math.sin(Math.sin(Math.sin(Math.sin(t / 12)))))),
+      sin5times(t / 12)),
   range: [0, Math.PI * 12],
   precision: 0.01,
   color: colors.orange[400],
