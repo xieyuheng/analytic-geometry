@@ -7,7 +7,7 @@ import { Formula } from './Formula'
 export function renderFormula(state: State, id: Id, formula: Formula): void {
   state.ctx.save()
 
-  const [width] = adjustCamera(state.ctx, state.camera)
+  const [width] = adjustCamera(state)
 
   state.ctx.strokeStyle = formula.color || 'black'
   state.ctx.lineWidth = id === state.hovered?.id ? 1 / 12 : 1 / 20

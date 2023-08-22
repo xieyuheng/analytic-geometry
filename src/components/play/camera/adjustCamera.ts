@@ -1,16 +1,13 @@
 import { Vector } from '../../../utils/vector'
-import { Camera } from './Camera'
+import { State } from '../State'
 
-export function adjustCamera(
-  ctx: CanvasRenderingContext2D,
-  camera: Camera,
-): Vector {
-  ctx.translate(ctx.canvas.width / 2, ctx.canvas.height / 2)
-  ctx.scale(camera.scale, -camera.scale)
-  ctx.translate(-camera.position[0], -camera.position[1])
+export function adjustCamera(state: State): Vector {
+  state.ctx.translate(state.width / 2, state.height / 2)
+  state.ctx.scale(state.camera.scale, -state.camera.scale)
+  state.ctx.translate(-state.camera.position[0], -state.camera.position[1])
 
-  const width = ctx.canvas.width / camera.scale
-  const height = ctx.canvas.height / camera.scale
+  const width = state.width / state.camera.scale
+  const height = state.height / state.camera.scale
 
   return [width, height]
 }

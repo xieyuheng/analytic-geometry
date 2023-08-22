@@ -7,7 +7,7 @@ import { Motion } from './Motion'
 export function renderMotion(state: State, id: Id, motion: Motion): void {
   state.ctx.save()
 
-  adjustCamera(state.ctx, state.camera)
+  adjustCamera(state)
 
   state.ctx.strokeStyle = motion.color || 'black'
   state.ctx.lineWidth = id === state.hovered?.id ? 1 / 12 : 1 / 20

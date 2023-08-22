@@ -5,7 +5,7 @@ import { moveToCamera } from './moveToCamera'
 export function renderCamera(state: State): void {
   state.ctx.save()
 
-  adjustCamera(state.ctx, state.camera)
+  adjustCamera(state)
   moveToCamera(state.ctx, state.camera)
 
   state.ctx.strokeStyle = 'hsla(20, 100%, 50%, 50%)'

@@ -9,6 +9,8 @@ export type State = {
   container: HTMLElement
   canvas: HTMLCanvasElement
   ctx: CanvasRenderingContext2D
+  width: number
+  height: number
   camera: Camera
   mouse: Mouse
   idCounter: number

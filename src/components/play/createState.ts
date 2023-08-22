@@ -11,26 +11,23 @@ export function createState(options: StateOptions): State {
   const { canvas, container } = options
 
   const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
+
   const camera = createCamera()
-  const mouse = createMouse(canvas)
 
-  // const width = container.offsetWidth
-  // const height = container.offsetHeight
+  const width = container.offsetWidth
+  const height = container.offsetHeight
 
-  // const ratio = window.devicePixelRatio
-
-  // canvas.width = width * ratio
-  // canvas.height = height * ratio
-
-  // canvas.style.width = width + 'px'
-  // canvas.style.height = height + 'px'
-
-  // ctx.scale(ratio, ratio)
+  const mouse = createMouse({
+    width,
+    height,
+  })
 
   return {
     container,
     canvas,
     ctx,
+    width,
+    height,
     camera,
     mouse,
     idCounter: 0,

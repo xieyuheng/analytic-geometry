@@ -11,7 +11,7 @@ export function renderHovered(state: State): void {
 
   state.ctx.save()
 
-  adjustCamera(state.ctx, state.camera)
+  adjustCamera(state)
 
   state.ctx.beginPath()
 

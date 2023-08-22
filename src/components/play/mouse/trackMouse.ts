@@ -11,9 +11,6 @@ export function trackMouse(state: State) {
   })
 
   state.canvas.addEventListener('mousemove', (event) => {
-    state.mouse.position = transformPoint(state.canvas, state.camera, [
-      event.offsetX,
-      event.offsetY,
-    ])
+    state.mouse.position = transformPoint(state, [event.offsetX, event.offsetY])
   })
 }

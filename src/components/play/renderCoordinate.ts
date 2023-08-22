@@ -4,7 +4,7 @@ import { adjustCamera } from './camera/adjustCamera'
 export function renderCoordinate(state: State): void {
   state.ctx.save()
 
-  const [width, height] = adjustCamera(state.ctx, state.camera)
+  const [width, height] = adjustCamera(state)
 
   state.ctx.strokeStyle = 'hsla(240, 100%, 50%, 50%)'
   state.ctx.lineWidth = 1 / 30

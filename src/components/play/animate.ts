@@ -8,7 +8,7 @@ import { renderHovered } from './renderHovered'
 import { renderInfo } from './renderInfo'
 
 export function animate(state: State): void {
-  state.ctx.clearRect(0, 0, state.canvas.width, state.canvas.height)
+  state.ctx.clearRect(0, 0, state.width, state.height)
 
   renderCamera(state)
   renderCoordinate(state)

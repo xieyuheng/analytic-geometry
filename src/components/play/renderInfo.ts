@@ -6,7 +6,7 @@ import { drawTextOverCamera } from './drawTextOverCamera'
 export function renderInfo(state: State): void {
   state.ctx.save()
 
-  const [width, height] = adjustCamera(state.ctx, state.camera)
+  const [width, height] = adjustCamera(state)
 
   const mouseX = state.mouse.position[0]
   const mouseY = state.mouse.position[1]

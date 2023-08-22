@@ -1,7 +1,3 @@
-use state width and height instead of canvas width and height
-
-fix canvas size by `window.devicePixelRatio`
-
 # play
 
 [play] buttons for control
