@@ -1,8 +1,5 @@
-import { Camera } from './Camera'
+import { State } from '../State'
 
-export function moveToCamera(
-  ctx: CanvasRenderingContext2D,
-  camera: Camera,
-): void {
-  ctx.translate(camera.position[0], camera.position[1])
+export function moveToCamera(state: State): void {
+  state.ctx.translate(state.camera.position[0], state.camera.position[1])
 }

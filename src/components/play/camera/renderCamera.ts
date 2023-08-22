@@ -6,7 +6,7 @@ export function renderCamera(state: State): void {
   state.ctx.save()
 
   adjustCamera(state)
-  moveToCamera(state.ctx, state.camera)
+  moveToCamera(state)
 
   state.ctx.strokeStyle = 'hsla(20, 100%, 50%, 50%)'
   state.ctx.lineWidth = 1 / 20
