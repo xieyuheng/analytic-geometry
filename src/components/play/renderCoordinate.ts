@@ -10,8 +10,8 @@ export function renderCoordinate(state: State): void {
   state.ctx.lineWidth = 1 / 30
 
   for (
-    let x = Math.floor(-width / 2) - state.camera.position[0];
-    x <= Math.ceil(width / 2) - state.camera.position[0];
+    let x = Math.floor(-width / 2) + state.camera.position[0];
+    x <= Math.ceil(width / 2) + state.camera.position[0];
     x += 1
   ) {
     state.ctx.beginPath()

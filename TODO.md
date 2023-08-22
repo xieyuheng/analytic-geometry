@@ -1,7 +1,7 @@
 # play
 
-[play] `renderButtonLeft` & `renderButtonRight`
-
+[play] button `debounce`
+[play] [chrome bug] double click canvas will select text in editor
 [play] be able to move camera
 [play] be able to scale camera
 [play] `renderMotion` -- show motion in time

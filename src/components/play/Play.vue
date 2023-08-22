@@ -43,6 +43,6 @@ watch(
 
 <template>
   <div class="h-full w-full" ref="containerElement">
-    <canvas ref="canvasElement"></canvas>
+    <canvas class="block" ref="canvasElement"></canvas>
   </div>
 </template>
