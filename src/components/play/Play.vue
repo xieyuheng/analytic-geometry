@@ -7,6 +7,12 @@ import { createExampleMotions } from './createExampleMotions'
 import { createState } from './createState'
 import { trackMouse } from './mouse/trackMouse'
 import { resizeCanvas } from './resizeCanvas'
+import { Mod } from '../../pages/playground/Mod'
+
+const props = defineProps<{
+  mod: Mod
+  tick: number
+}>()
 
 const state = ref<State | undefined>(undefined)
 

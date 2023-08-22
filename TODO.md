@@ -1,6 +1,6 @@
 # play
 
-[play] `Play` take `mod` and `tick` as props
+[play] `stateRefresh`
 [play] `Play` build `State` from `mod` -- state no need to have `mod`
 
 # playground
