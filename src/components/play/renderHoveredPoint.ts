@@ -3,24 +3,24 @@ import { numberOmitAfterFloatPoint } from '../../utils/numberOmitAfterFloatPoint
 import { State } from './State'
 import { adjustCamera } from './camera/adjustCamera'
 import { drawText } from './drawText'
+import { HoverablePoint } from './hoverable-point/HoverablePoint'
 
-export function renderHoveredPoint(state: State): void {
-  if (state.HoveredPoint === undefined) {
-    return
-  }
-
+export function renderHoveredPoint(
+  state: State,
+  hoveredPoint: HoverablePoint,
+): void {
   state.ctx.save()
 
   adjustCamera(state)
 
   state.ctx.beginPath()
 
-  const x = state.HoveredPoint.position[0]
-  const y = state.HoveredPoint.position[1]
+  const x = hoveredPoint.position[0]
+  const y = hoveredPoint.position[1]
 
   const xText = `x: ${numberOmitAfterFloatPoint(x, 0.001)}`
   const yText = `y: ${numberOmitAfterFloatPoint(y, 0.001)}`
-  const description = state.HoveredPoint.description || ''
+  const description = hoveredPoint.description || ''
 
   const descriptionMetrics = state.ctx.measureText(description)
   const xTextMetrics = state.ctx.measureText(xText)

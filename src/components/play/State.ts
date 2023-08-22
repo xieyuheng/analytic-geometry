@@ -20,7 +20,7 @@ export type State = {
   // Abstract devices:
   camera: Camera
   mouse: Mouse
-  HoveredPoint?: HoverablePoint
+  hoveredPoint?: HoverablePoint
 
   // Entity stores:
   idCounter: number
