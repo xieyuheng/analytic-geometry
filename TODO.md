@@ -1,5 +1,3 @@
-setup tailwindcss
-
 add editor to playground -- eval js code to build entities
 
 [control] be able to move camera

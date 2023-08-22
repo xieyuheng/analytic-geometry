@@ -5,8 +5,7 @@ import { createState } from "./createState"
 import { trackMouse } from "./mouse/trackMouse"
 import { resizeCanvas } from "./resizeCanvas"
 
-export function main() {
-  const canvas = document.getElementById("canvas") as HTMLCanvasElement
+export function main(canvas: HTMLCanvasElement): void {
   const state = createState(canvas)
   resizeCanvas(state.canvas)
 
