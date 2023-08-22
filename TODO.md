@@ -1,9 +1,7 @@
 # playground
 
-[playground] `PlaygroundEditor`
 [playground] `PlaygroundToolbar`
 [playground] `PlaygroundNavbar`
-[playground] `PlaygroundPlay`
 [playground] `PlaygroundError`
 
 [playground] eval js code to build entities

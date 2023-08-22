@@ -14,9 +14,9 @@ const containerElement = ref<HTMLDivElement | undefined>(undefined)
 const canvasElement = ref<HTMLCanvasElement | undefined>(undefined)
 
 onMounted(() => {
-  if (canvasElement.value) {
+  if (canvasElement.value && containerElement.value) {
     state.value = createState(canvasElement.value)
-    resizeCanvas(state.value.canvas)
+    resizeCanvas(state.value.canvas, containerElement.value)
 
     state.value.camera.position = [1, 1]
 
@@ -29,7 +29,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="containerElement">
+  <div class="h-full w-full" ref="containerElement">
     <canvas ref="canvasElement"></canvas>
   </div>
 </template>

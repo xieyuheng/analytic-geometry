@@ -1,9 +1,12 @@
-export function resizeCanvas(canvas: HTMLCanvasElement) {
-  canvas.width = window.innerWidth
-  canvas.height = window.innerHeight
+export function resizeCanvas(
+  canvas: HTMLCanvasElement,
+  containerElement: HTMLElement,
+) {
+  canvas.width = containerElement.offsetWidth
+  canvas.height = containerElement.offsetHeight
 
-  window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-  })
+  new ResizeObserver(() => {
+    canvas.width = containerElement.offsetWidth
+    canvas.height = containerElement.offsetHeight
+  }).observe(containerElement)
 }
