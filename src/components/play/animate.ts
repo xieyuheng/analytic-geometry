@@ -36,6 +36,7 @@ export function animate(state: State, passedTime?: number): void {
 
   const clickPeriod = 120
   if (state.mouse.isDown && state.clickCoollingTimer <= 0) {
+    state.HoveredPoint = undefined
     onClick(state)
     state.clickCoollingTimer = clickPeriod
   } else if (state.clickCoollingTimer > 0) {
