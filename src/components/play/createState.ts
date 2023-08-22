@@ -31,5 +31,6 @@ export function createState(options: StateOptions): State {
     formulas: new Map(),
     motions: new Map(),
     hoverablePoints: new Map(),
+    buttons: new Map(),
   }
 }

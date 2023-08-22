@@ -1,7 +1,6 @@
 import { Mod } from './Mod'
 import { State } from './State'
-import { createFormula } from './formula/createFormula'
-import { createMotion } from './motion/createMotion'
+import { createId } from './id/createId'
 
 export function stateRefresh(state: State, mod: Mod): void {
   state.formulas = new Map()
@@ -9,10 +8,10 @@ export function stateRefresh(state: State, mod: Mod): void {
   state.hoverablePoints = new Map()
 
   for (const formula of mod.formulas) {
-    createFormula(state, formula)
+    state.formulas.set(createId(state), formula)
   }
 
   for (const motion of mod.motions) {
-    createMotion(state, motion)
+    state.motions.set(createId(state), motion)
   }
 }
