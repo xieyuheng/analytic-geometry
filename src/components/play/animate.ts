@@ -9,7 +9,11 @@ import { renderCoordinate } from './renderCoordinate'
 import { renderHoveredPoint } from './renderHoveredPoint'
 import { renderInfo } from './renderInfo'
 
-export function animate(state: State): void {
+export function animate(state: State, passedTime?: number): void {
+  passedTime = passedTime || 0
+  const deltaTime = passedTime - state.lastTime
+  state.lastTime = passedTime
+
   state.ctx.clearRect(0, 0, state.width, state.height)
 
   renderCoordinate(state)
@@ -30,9 +34,15 @@ export function animate(state: State): void {
 
   renderController(state)
 
-  if (state.mouse.isDown) {
-    onClick(state)
+  const clickPeriod = 1000 / 30
+  if (state.clickCoollingTimer <= 0) {
+    if (state.mouse.isDown) {
+      onClick(state)
+      state.clickCoollingTimer = clickPeriod
+    }
+  } else {
+    state.clickCoollingTimer = Math.min(0, state.clickCoollingTimer - deltaTime)
   }
 
-  requestAnimationFrame(() => animate(state))
+  requestAnimationFrame((passedTime) => animate(state, passedTime))
 }

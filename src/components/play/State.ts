@@ -11,6 +11,8 @@ export type State = {
   ctx: CanvasRenderingContext2D
   width: number
   height: number
+  lastTime: number
+  clickCoollingTimer: number
   camera: Camera
   mouse: Mouse
   idCounter: number

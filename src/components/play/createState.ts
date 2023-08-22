@@ -19,12 +19,20 @@ export function createState(options: StateOptions): State {
 
   const mouse = createMouse({ width, height })
 
+  const frameLimit = {
+    lastTime: 0,
+    interval: 1000 / 16,
+    timer: 0,
+  }
+
   return {
     container,
     canvas,
     ctx,
     width,
     height,
+    lastTime: 0,
+    clickCoollingTimer: 0,
     camera,
     mouse,
     idCounter: 0,
