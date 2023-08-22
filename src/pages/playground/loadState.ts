@@ -14,7 +14,6 @@ export async function loadState(options: StateOptions): Promise<State> {
     kind: 'Play',
     text,
     mod,
-    output: '',
     errorMessage: '',
     tick: 0,
   }

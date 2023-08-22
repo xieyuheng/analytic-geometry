@@ -2,10 +2,12 @@ import colors from 'tailwindcss/colors'
 import { Formula } from '../../components/play/formula/Formula'
 import { Motion } from '../../components/play/motion/Motion'
 import { State } from './State'
+import { createMod } from './createMod'
 
 export async function stateReload(state: State): Promise<void> {
   state.errorMessage = ''
-  state.output = ''
+
+  state.mod = createMod()
 
   function createFormula(formula: Formula) {
     state.mod.formulas.push(formula)
