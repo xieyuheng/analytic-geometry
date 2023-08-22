@@ -12,6 +12,7 @@ export function renderButtonUp(state: State, options: { size: number }): void {
 
   state.ctx.beginPath()
   state.ctx.strokeStyle = 'black'
+    state.ctx.fillStyle = 'hsla(0, 100%, 100%, 50%)'
   state.ctx.lineWidth = 1
   state.ctx.moveTo((lowX + highX) / 2, lowY)
   const r = Math.sqrt(3 / 4)
@@ -19,6 +20,7 @@ export function renderButtonUp(state: State, options: { size: number }): void {
   state.ctx.lineTo(lowX, lowY * (1 - r) + highY * r)
   state.ctx.closePath()
   state.ctx.stroke()
+    state.ctx.fill()
 
   state.ctx.restore()
 
