@@ -43,6 +43,17 @@ async function share() {
 
 <template>
   <div class="flex space-x-4">
+    <a
+      target="_blank"
+      href="https://github.com/xieyuheng/analytic-geometry"
+      class="text-xl hover:underline underline-offset-4 decoration-2"
+    >
+      <Lang>
+        <template #zh> 文档 </template>
+        <template #en> Docs </template>
+      </Lang>
+    </a>
+
     <button
       class="text-xl hover:underline underline-offset-4 decoration-2"
       @click="share()"

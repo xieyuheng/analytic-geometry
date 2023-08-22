@@ -45,9 +45,9 @@ watch(
         class="flex flex-col overflow-auto md:w-1/3 h-full md:min-h-full min-h-[23rem]"
       >
         <div
-          class="border-b flex justify-between sm:border-t-0 border-t dark:border-white border-black px-3 py-2"
+          class="border-b flex justify-between border-b flex-wrap dark:border-white border-black px-3 py-2"
         >
-          <div class="font-bold text-xl">Analytic Geometry</div>
+          <div class="font-bold text-xl pr-3">Analytic Geometry</div>
           <PlaygroundToolbar :state="state" />
         </div>
 
@@ -55,7 +55,7 @@ watch(
       </div>
 
       <div
-        class="md:border-l grow-1 flex flex-col md:min-h-full min-h-[23rem] overflow-auto h-full border-black dark:border-white md:w-2/3"
+        class="md:border-l md:border-t-0 border-t grow-1 flex flex-col md:min-h-full min-h-[23rem] overflow-auto h-full border-black dark:border-white md:w-2/3"
       >
         <PlaygroundPlay v-if="state.kind === 'Play'" :state="state" />
 
