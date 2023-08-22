@@ -6,6 +6,7 @@ import { Motion } from './motion/Motion'
 import { Mouse } from './mouse/Mouse'
 
 export type State = {
+  container: HTMLElement
   canvas: HTMLCanvasElement
   ctx: CanvasRenderingContext2D
   camera: Camera

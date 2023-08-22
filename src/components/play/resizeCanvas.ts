@@ -1,12 +1,11 @@
-export function resizeCanvas(
-  canvas: HTMLCanvasElement,
-  containerElement: HTMLElement,
-) {
-  canvas.width = containerElement.offsetWidth
-  canvas.height = containerElement.offsetHeight
+import { State } from './State'
+
+export function resizeCanvas(state: State) {
+  state.canvas.width = state.container.offsetWidth
+  state.canvas.height = state.container.offsetHeight
 
   new ResizeObserver(() => {
-    canvas.width = containerElement.offsetWidth
-    canvas.height = containerElement.offsetHeight
-  }).observe(containerElement)
+    state.canvas.width = state.container.offsetWidth
+    state.canvas.height = state.container.offsetHeight
+  }).observe(state.container)
 }
