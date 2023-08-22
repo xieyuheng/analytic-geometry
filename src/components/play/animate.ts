@@ -10,9 +10,7 @@ import { renderInfo } from './renderInfo'
 export function animate(state: State): void {
   state.ctx.clearRect(0, 0, state.width, state.height)
 
-  renderCamera(state)
   renderCoordinate(state)
-  renderInfo(state)
 
   for (const [id, formula] of state.formulas) {
     renderFormula(state, id, formula)
@@ -24,6 +22,9 @@ export function animate(state: State): void {
 
   updateHovered(state)
   renderHovered(state)
+
+  renderCamera(state)
+  renderInfo(state)
 
   requestAnimationFrame(() => animate(state))
 }
