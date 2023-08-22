@@ -1,14 +1,3 @@
-# play
-
-[play] `stateRefresh`
-[play] `Play` build `State` from `mod` -- state no need to have `mod`
-
-# playground
-
-[playground] export tailwind colors to user script
-
-# play
-
 [play] be able to move camera
 [play] be able to scale camera
 [play] `renderMotion` -- show motion in time
