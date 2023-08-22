@@ -34,14 +34,12 @@ export function animate(state: State, passedTime?: number): void {
 
   renderController(state)
 
-  const clickPeriod = 1000 / 30
-  if (state.clickCoollingTimer <= 0) {
-    if (state.mouse.isDown) {
-      onClick(state)
-      state.clickCoollingTimer = clickPeriod
-    }
-  } else {
-    state.clickCoollingTimer = Math.min(0, state.clickCoollingTimer - deltaTime)
+  const clickPeriod = 200
+  if (state.mouse.isDown && state.clickCoollingTimer <= 0) {
+    onClick(state)
+    state.clickCoollingTimer = clickPeriod
+  } else if (state.clickCoollingTimer > 0) {
+    state.clickCoollingTimer -= deltaTime
   }
 
   requestAnimationFrame((passedTime) => animate(state, passedTime))
