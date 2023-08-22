@@ -1,5 +1,7 @@
 # play
 
+[play] `createButton`
+[play] `onClick`
 [play] `renderController`
 [play] be able to move camera
 [play] be able to scale camera

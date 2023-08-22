@@ -3,6 +3,7 @@ import { renderCamera } from './camera/renderCamera'
 import { renderFormula } from './formula/renderFormula'
 import { updateHovered } from './hoverable-point/updateHovered'
 import { renderMotion } from './motion/renderMotion'
+import { onClick } from './onClick'
 import { renderCoordinate } from './renderCoordinate'
 import { renderHoveredPoint } from './renderHoveredPoint'
 import { renderInfo } from './renderInfo'
@@ -25,6 +26,10 @@ export function animate(state: State): void {
 
   renderCamera(state)
   renderInfo(state)
+
+  if (state.mouse.isDown) {
+    onClick(state)
+  }
 
   requestAnimationFrame(() => animate(state))
 }

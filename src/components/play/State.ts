@@ -1,3 +1,4 @@
+import { Button } from './button/Button'
 import { Camera } from './camera/Camera'
 import { Formula } from './formula/Formula'
 import { HoverablePoint } from './hoverable-point/HoverablePoint'
@@ -17,4 +18,5 @@ export type State = {
   formulas: Map<string, Formula>
   motions: Map<string, Motion>
   hoverablePoints: Map<string, HoverablePoint>
+  buttons: Map<string, Button>
 }
