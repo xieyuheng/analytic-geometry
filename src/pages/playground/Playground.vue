@@ -62,6 +62,7 @@ watch(
         <PlaygroundError
           v-if="state.errorMessage && state.kind === 'Error'"
           :state="state"
+          :errorMessage="state.errorMessage"
         />
       </div>
     </div>

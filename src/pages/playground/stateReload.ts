@@ -4,24 +4,22 @@ export async function stateReload(state: State): Promise<void> {
   state.errorMessage = ''
   state.output = ''
 
-  // state.mod.loader.onOutput = (output) => {
-  //   state.output += output
-  //   state.output += '\n'
-  // }
+  function defineFormula() {
+    //
+  }
 
-  // state.mod = createMod({
-  //   loader: state.mod.loader,
-  //   url: state.mod.url,
-  //   text: state.text,
-  //   stmts: [],
-  // })
+  function defineMotion() {
+    //
+  }
 
   try {
-    // state.mod.stmts = parseStmts(state.text)
+    const customFunction = Function(
+      'defineFormula',
+      'defineMotion',
+      '"use strict";\n' + state.text,
+    )
 
-    // for (const stmt of state.mod.stmts) {
-    //   await stmt.execute(state.mod)
-    // }
+    customFunction(defineFormula, defineMotion)
 
     // NOTE After async execution, update `tick`
     // for `Play` component to refresh state.

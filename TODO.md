@@ -1,13 +1,13 @@
 # playground
 
-[playground] fix `stateReload`
-
-[playground] eval js code to build entities
+[playground] fix `stateReload` -- eval js code to build entities
 
 - `defineMotion`
 - `defineFormula`
 
 # play
+
+[play] `Play` take `mod` and `tick` as props
 
 [play] be able to move camera
 [play] be able to scale camera

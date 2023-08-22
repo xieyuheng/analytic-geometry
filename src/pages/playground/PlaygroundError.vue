@@ -9,6 +9,6 @@ defineProps<{
 
 <template>
   <div class="flex flex-col h-full w-full overflow-auto p-3">
-    <pre class="text-sm md:text-base text-base" v-html="errorMessage"></pre>
+    <pre class="text-sm md:text-base" v-html="errorMessage"></pre>
   </div>
 </template>
