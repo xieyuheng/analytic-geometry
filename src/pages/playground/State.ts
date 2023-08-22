@@ -1,5 +1,5 @@
 export type State = {
-  kind: 'Play' | 'Output' | 'Error'
+  kind: 'Play' | 'Error'
   text: string
   // mod: Mod
   output: string
