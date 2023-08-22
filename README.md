@@ -2,8 +2,6 @@
 
 A program to draw analytic geometry graphs on canvas.
 
--> [Visit the website](https://analytic-geometry.xieyuheng.com)!
-
 ## Usage
 
 We can write JavaScript code in the playground.
