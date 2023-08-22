@@ -1,25 +1,29 @@
+import colors from 'tailwindcss/colors'
+import { Formula } from '../../components/play/formula/Formula'
+import { Motion } from '../../components/play/motion/Motion'
 import { State } from './State'
 
 export async function stateReload(state: State): Promise<void> {
   state.errorMessage = ''
   state.output = ''
 
-  function defineFormula() {
-    //
+  function createFormula(formula: Formula) {
+    state.mod.formulas.push(formula)
   }
 
-  function defineMotion() {
-    //
+  function createMotion(motion: Motion) {
+    state.mod.motions.push(motion)
   }
 
   try {
     const customFunction = Function(
-      'defineFormula',
-      'defineMotion',
+      'createFormula',
+      'createMotion',
+      'colors',
       '"use strict";\n' + state.text,
     )
 
-    customFunction(defineFormula, defineMotion)
+    customFunction(createFormula, createMotion, colors)
 
     // NOTE After async execution, update `tick`
     // for `Play` component to refresh state.

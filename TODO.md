@@ -5,10 +5,7 @@
 
 # playground
 
-[playground] fix `stateReload` -- eval js code to build entities
-
-- `defineMotion`
-- `defineFormula`
+[playground] export tailwind colors to user script
 
 # play
 
