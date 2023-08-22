@@ -3,10 +3,12 @@ import { transformPoint } from '../camera/transformPoint'
 
 export function trackMouse(state: State) {
   state.canvas.addEventListener('mousedown', (event) => {
+    event.preventDefault()
     state.mouse.isDown = true
   })
 
   state.canvas.addEventListener('mouseup', (event) => {
+    event.preventDefault()
     state.mouse.isDown = false
   })
 
