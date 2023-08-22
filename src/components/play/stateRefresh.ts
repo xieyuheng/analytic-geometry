@@ -1,7 +1,7 @@
-import { Mod } from './Mod.ts'
-import { State } from './State.ts'
-import { createFormula } from './formula/createFormula.ts'
-import { createMotion } from './motion/createMotion.ts'
+import { Mod } from './Mod'
+import { State } from './State'
+import { createFormula } from './formula/createFormula'
+import { createMotion } from './motion/createMotion'
 
 export function stateRefresh(state: State, mod: Mod): void {
   state.formulas = new Map()
