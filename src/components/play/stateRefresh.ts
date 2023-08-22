@@ -1,4 +1,4 @@
-import { Mod } from '../../pages/playground/Mod.ts'
+import { Mod } from './Mod.ts'
 import { State } from './State.ts'
 import { createFormula } from './formula/createFormula.ts'
 import { createMotion } from './motion/createMotion.ts'

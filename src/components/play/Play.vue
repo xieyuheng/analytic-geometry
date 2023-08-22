@@ -6,7 +6,7 @@ import { createState } from './createState'
 import { trackMouse } from './mouse/trackMouse'
 import { resizeCanvas } from './resizeCanvas'
 import { stateRefresh } from './stateRefresh'
-import { Mod } from '../../pages/playground/Mod'
+import { Mod } from './Mod'
 
 const props = defineProps<{
   mod: Mod

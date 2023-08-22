@@ -1,3 +1,5 @@
+# play
+
 [play] be able to move camera
 [play] be able to scale camera
 [play] `renderMotion` -- show motion in time

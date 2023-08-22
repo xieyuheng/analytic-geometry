@@ -1,5 +1,5 @@
+import { createMod } from '../../components/play/createMod'
 import { State } from './State'
-import { createMod } from './createMod'
 import { stateReload } from './stateReload'
 
 export type StateOptions = {

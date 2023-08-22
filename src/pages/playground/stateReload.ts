@@ -1,8 +1,8 @@
 import colors from 'tailwindcss/colors'
+import { createMod } from '../../components/play/createMod'
 import { Formula } from '../../components/play/formula/Formula'
 import { Motion } from '../../components/play/motion/Motion'
 import { State } from './State'
-import { createMod } from './createMod'
 
 export async function stateReload(state: State): Promise<void> {
   state.errorMessage = ''

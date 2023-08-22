@@ -1,4 +1,4 @@
-import { Mod } from './Mod'
+import { Mod } from '../../components/play/Mod'
 
 export type State = {
   kind: 'Play' | 'Error'
