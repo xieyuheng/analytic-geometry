@@ -32,22 +32,23 @@ watch(
 </script>
 
 <template>
-  <div     class="flex overflow-auto h-screen-dynamic flex-col dark:bg-stone-800 dark:text-white">
   <div
-    v-if="state"
-    class="flex flex-col md:h-full md:overflow-auto md:flex-row"
+    class="flex overflow-auto h-screen-dynamic flex-col dark:bg-stone-800 dark:text-white"
   >
-    <PlaygroundEditor
-      class="md:w-1/2 h-full md:min-h-full min-h-[23rem] md:resize-x"
-      :state="state"
-    />
-
     <div
-      class="md:border-l grow-1 flex flex-col md:min-h-full min-h-[23rem] overflow-auto h-full border-black dark:border-white md:w-1/2"
+      v-if="state"
+      class="flex flex-col md:h-full md:overflow-auto md:flex-row"
     >
-      <PlaygroundPlay v-if="state.kind === 'Play'" :state="state" />
-    </div>
-  </div>    
-  </div>
+      <PlaygroundEditor
+        class="md:w-1/2 h-full md:min-h-full min-h-[23rem] md:resize-x"
+        :state="state"
+      />
 
+      <div
+        class="md:border-l grow-1 flex flex-col md:min-h-full min-h-[23rem] overflow-auto h-full border-black dark:border-white md:w-3/4"
+      >
+        <PlaygroundPlay v-if="state.kind === 'Play'" :state="state" />
+      </div>
+    </div>
+  </div>
 </template>

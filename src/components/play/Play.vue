@@ -22,7 +22,7 @@ onMounted(() => {
 
     createExampleFormulas(state.value)
     createExampleMotions(state.value)
-    trackMouse(state.value, containerElement.value)
+    trackMouse(state.value)
     animate(state.value)
   }
 })

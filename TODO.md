@@ -1,7 +1,5 @@
 # playground
 
-fix `trackMouse`
-
 [playground] `PlaygroundToolbar`
 [playground] `PlaygroundNavbar`
 [playground] `PlaygroundError`
