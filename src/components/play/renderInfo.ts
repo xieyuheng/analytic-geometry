@@ -8,8 +8,8 @@ export function renderInfo(state: State): void {
 
   const [width, height] = adjustCamera(state)
 
-  const mouseX = state.mouse.position[0]
-  const mouseY = state.mouse.position[1]
+  const mouseX = state.mouse.adjustedPosition[0]
+  const mouseY = state.mouse.adjustedPosition[1]
 
   drawTextOverCamera(
     state,

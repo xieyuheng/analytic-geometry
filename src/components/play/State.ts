@@ -18,5 +18,5 @@ export type State = {
   formulas: Map<string, Formula>
   motions: Map<string, Motion>
   hoverablePoints: Map<string, HoverablePoint>
-  buttons: Map<string, Button>
+  overCameraButtons: Map<string, Button>
 }

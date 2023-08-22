@@ -1,5 +1,6 @@
 import { State } from './State'
 import { renderCamera } from './camera/renderCamera'
+import { renderController } from './controller/renderController'
 import { renderFormula } from './formula/renderFormula'
 import { updateHovered } from './hoverable-point/updateHovered'
 import { renderMotion } from './motion/renderMotion'
@@ -26,6 +27,8 @@ export function animate(state: State): void {
 
   renderCamera(state)
   renderInfo(state)
+
+  renderController(state)
 
   if (state.mouse.isDown) {
     onClick(state)

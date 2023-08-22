@@ -28,7 +28,7 @@ export function renderMotion(state: State, id: string, motion: Motion): void {
     state.ctx.lineTo(x1, y1)
     state.ctx.stroke()
 
-    const newDistance = vectorDistance(state.mouse.position, [x0, y0])
+    const newDistance = vectorDistance(state.mouse.adjustedPosition, [x0, y0])
     if (newDistance < distance) {
       xmin = x0
       ymin = y0
