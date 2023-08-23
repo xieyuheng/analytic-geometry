@@ -30,7 +30,7 @@ export function renderButtonRight(
   state.overCameraButtons.set('Right', {
     boxRegion: { lowX, lowY, highX, highY },
     handler: (state) => {
-      state.camera.position[0]++
+      state.camera.position[0]+= 30 / state.camera.scale
     },
   })
 }

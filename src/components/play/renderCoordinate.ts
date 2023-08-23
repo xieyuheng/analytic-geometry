@@ -10,8 +10,8 @@ export function renderCoordinate(state: State): void {
   state.ctx.lineWidth = 1 / state.camera.scale
 
   for (
-    let x = Math.floor(-width / 2) + state.camera.position[0];
-    x <= Math.ceil(width / 2) + state.camera.position[0];
+    let x = Math.floor(-width / 2 + state.camera.position[0]);
+    x <= Math.ceil(width / 2 + state.camera.position[0]);
     x += 1
   ) {
     state.ctx.beginPath()
@@ -23,8 +23,8 @@ export function renderCoordinate(state: State): void {
   }
 
   for (
-    let y = Math.floor(-height / 2) + state.camera.position[1];
-    y <= Math.ceil(height / 2) + state.camera.position[1];
+    let y = Math.floor(-height / 2 + state.camera.position[1]);
+    y <= Math.ceil(height / 2 + state.camera.position[1]);
     y += 1
   ) {
     state.ctx.beginPath()

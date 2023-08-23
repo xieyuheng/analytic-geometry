@@ -30,7 +30,7 @@ export function renderButtonDown(
   state.overCameraButtons.set('Down', {
     boxRegion: { lowX, lowY, highX, highY },
     handler: (state) => {
-      state.camera.position[1]--
+      state.camera.position[1] -= 30 / state.camera.scale
     },
   })
 }

@@ -27,7 +27,7 @@ export function renderButtonUp(state: State, options: { size: number }): void {
   state.overCameraButtons.set('Up', {
     boxRegion: { lowX, lowY, highX, highY },
     handler: (state) => {
-      state.camera.position[1]++
+      state.camera.position[1]+= 30 / state.camera.scale
     },
   })
 }
