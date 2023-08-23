@@ -40,7 +40,7 @@ export function renderButtonSmaller(
     boxRegion: { lowX, lowY, highX, highY },
     handler: (state) => {
       if (state.camera.scale >= 5) {
-        state.camera.scale -= 2
+        state.camera.scale /= 1.1
       }
     },
   })

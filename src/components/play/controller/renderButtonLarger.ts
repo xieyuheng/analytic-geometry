@@ -43,7 +43,7 @@ export function renderButtonLarger(
   state.overCameraButtons.set('Larger', {
     boxRegion: { lowX, lowY, highX, highY },
     handler: (state) => {
-      state.camera.scale += 2
+      state.camera.scale *= 1.1
     },
   })
 }
