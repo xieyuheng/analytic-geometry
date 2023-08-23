@@ -36,11 +36,11 @@ export function renderHoveredPoint(
   const boxHeight = 0.8 * 3 + 0.1
 
   state.ctx.beginPath()
-  state.ctx.strokeStyle = colors.rose[400]
-  state.ctx.lineWidth = 1 / 10
+  state.ctx.strokeStyle = 'black'
+  state.ctx.lineWidth = 1 / 20
   state.ctx.strokeRect(x, y, boxWidth, boxHeight)
 
-  state.ctx.fillStyle = 'white'
+  state.ctx.fillStyle = 'hsla(0, 100%, 100%, 50%)'
   state.ctx.fillRect(x, y, boxWidth, boxHeight)
 
   state.ctx.fillStyle = 'black'
@@ -50,8 +50,8 @@ export function renderHoveredPoint(
     fontScale: 2,
   })
 
-  state.ctx.fillStyle = colors.rose[400]
-  state.ctx.arc(x, y, 0.2, 0, Math.PI * 2)
+  state.ctx.fillStyle = 'black'
+  state.ctx.arc(x, y, 0.13, 0, Math.PI * 2)
   state.ctx.fill()
 
   state.ctx.restore()
