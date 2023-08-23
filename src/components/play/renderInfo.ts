@@ -11,10 +11,12 @@ export function renderInfo(state: State): void {
   const mouseX = state.mouse.adjustedPosition[0]
   const mouseY = state.mouse.adjustedPosition[1]
 
+  const unit = 1 / state.camera.scale
+
   drawTextOverCamera(
     state,
     `x: ${numberOmitAfterFloatPoint(mouseX, 0.01)}`,
-    [-width / 2 + 0.3, height / 2 - 0.2],
+    [-width / 2 + 9 * unit, height / 2 - 6 * unit],
     {
       fontScale: 1.8,
       textBaseline: 'hanging',
@@ -23,7 +25,7 @@ export function renderInfo(state: State): void {
   drawTextOverCamera(
     state,
     `y: ${numberOmitAfterFloatPoint(mouseY, 0.01)}`,
-    [-width / 2 + 0.3, height / 2 - 0.9],
+    [-width / 2 + 9 * unit, height / 2 - 27 * unit],
     {
       fontScale: 1.8,
       textBaseline: 'hanging',

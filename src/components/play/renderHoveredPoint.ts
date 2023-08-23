@@ -21,6 +21,9 @@ export function renderHoveredPoint(
   const yText = `y: ${numberOmitAfterFloatPoint(y, 0.001)}`
   const description = hoveredPoint.description || ''
 
+  const unit = 1 / state.camera.scale
+  const fontScale = 2
+
   const descriptionMetrics = state.ctx.measureText(description)
   const xTextMetrics = state.ctx.measureText(xText)
   const yTextMetrics = state.ctx.measureText(yText)
@@ -31,8 +34,8 @@ export function renderHoveredPoint(
     yTextMetrics.width,
   )
 
-  const boxWidth = (maxWidth / state.camera.scale) * 3
-  const boxHeight = 0.8 * 3 + 0.1
+  const boxWidth = maxWidth * unit * 2.2
+  const boxHeight = 75 * unit
 
   state.ctx.beginPath()
   state.ctx.strokeStyle = 'black'
@@ -43,10 +46,14 @@ export function renderHoveredPoint(
   state.ctx.fillRect(x, y, boxWidth, boxHeight)
 
   state.ctx.fillStyle = 'black'
-  drawText(state, xText, [x + 0.1, y + 0.2], { fontScale: 2 })
-  drawText(state, yText, [x + 0.1, y + 0.2 + 0.8], { fontScale: 2 })
-  drawText(state, description, [x + 0.1, y + 0.2 + 0.8 * 2], {
-    fontScale: 2,
+  drawText(state, xText, [x + 3 * unit, y + 6 * unit], {
+    fontScale,
+  })
+  drawText(state, yText, [x + 3 * unit, y + 6 * unit + 24 * unit], {
+    fontScale,
+  })
+  drawText(state, description, [x + 3 * unit, y + 6 * unit + 48 * unit], {
+    fontScale,
   })
 
   state.ctx.fillStyle = 'black'
