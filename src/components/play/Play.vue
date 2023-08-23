@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, watch, ref } from 'vue'
 import { State } from './State'
-import { animate } from './animate'
+import { render } from './render'
 import { createState } from './createState'
 import { trackMouse } from './mouse/trackMouse'
 import { resizeCanvas } from './resizeCanvas'
@@ -29,7 +29,7 @@ onMounted(() => {
     trackMouse(state.value)
     listenKeyboard(state.value)
     stateRefresh(state.value, props.mod)
-    animate(state.value)
+    render(state.value)
   }
 })
 
@@ -52,3 +52,4 @@ watch(
     ></canvas>
   </div>
 </template>
+./render

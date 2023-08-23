@@ -1,5 +1,5 @@
-import { Vector } from '../../utils/vector'
-import { State } from './State'
+import { Vector } from '../../../utils/vector'
+import { State } from '../State'
 
 // Assume the `adjustCamera` is called.
 

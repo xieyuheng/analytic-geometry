@@ -1,7 +1,7 @@
 import { numberOmitAfterFloatPoint } from '../../utils/numberOmitAfterFloatPoint'
 import { State } from './State'
 import { adjustCamera } from './camera/adjustCamera'
-import { drawTextOverCamera } from './drawTextOverCamera'
+import { drawTextOverCamera } from './utils/drawTextOverCamera'
 
 export function renderInfo(state: State): void {
   state.ctx.save()

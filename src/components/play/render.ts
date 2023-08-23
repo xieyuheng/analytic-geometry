@@ -4,12 +4,12 @@ import { renderController } from './controller/renderController'
 import { renderFormula } from './formula/renderFormula'
 import { updateHovered } from './hoverable-point/updateHovered'
 import { renderMotion } from './motion/renderMotion'
-import { onClick } from './onClick'
+import { onClick } from './mouse/onClick'
 import { renderCoordinate } from './renderCoordinate'
 import { renderHoveredPoint } from './renderHoveredPoint'
 import { renderInfo } from './renderInfo'
 
-export function animate(state: State, passedTime?: number): void {
+export function render(state: State, passedTime?: number): void {
   passedTime = passedTime || 0
   const deltaTime = passedTime - state.lastTime
   state.lastTime = passedTime
@@ -44,5 +44,5 @@ export function animate(state: State, passedTime?: number): void {
   renderCamera(state)
   renderInfo(state)
 
-  requestAnimationFrame((passedTime) => animate(state, passedTime))
+  requestAnimationFrame((passedTime) => render(state, passedTime))
 }
