@@ -6,7 +6,7 @@ import { createState } from './createState'
 import { trackMouse } from './mouse/trackMouse'
 import { resizeCanvas } from './resizeCanvas'
 import { stateRefresh } from './stateRefresh'
-import { Mod } from './Mod'
+import { Mod } from './mod/Mod'
 import { listenKeyboard } from './listenKeyboard'
 
 const props = defineProps<{
@@ -45,6 +45,10 @@ watch(
 
 <template>
   <div class="h-full w-full" ref="containerElement">
-    <canvas @click="canvasElement?.focus()" tabindex="1" ref="canvasElement"></canvas>
+    <canvas
+      @click="canvasElement?.focus()"
+      tabindex="1"
+      ref="canvasElement"
+    ></canvas>
   </div>
 </template>

@@ -20,7 +20,6 @@ export type State = {
   // Abstract devices:
   camera: Camera
   mouse: Mouse
-  hoveredPoint?: HoverablePoint
 
   // Entity stores:
   idCounter: number
@@ -28,4 +27,7 @@ export type State = {
   motions: Map<string, Motion>
   hoverablePoints: Map<string, HoverablePoint>
   overCameraButtons: Map<string, Button>
+
+  // Interactions:
+  hoveredPoint?: HoverablePoint
 }

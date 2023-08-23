@@ -1,6 +1,6 @@
-import { Mod } from './Mod'
 import { State } from './State'
 import { createId } from './id/createId'
+import { Mod } from './mod/Mod'
 
 export function stateRefresh(state: State, mod: Mod): void {
   state.formulas = new Map()

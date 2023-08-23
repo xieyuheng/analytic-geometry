@@ -1,4 +1,4 @@
-import { createMod } from '../../components/play/createMod'
+import { createMod } from '../../components/play/mod/createMod'
 import { State } from './State'
 import { stateReload } from './stateReload'
 

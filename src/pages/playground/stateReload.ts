@@ -1,6 +1,6 @@
 import colors from 'tailwindcss/colors'
-import { createMod } from '../../components/play/createMod'
 import { Formula } from '../../components/play/formula/Formula'
+import { createMod } from '../../components/play/mod/createMod'
 import { Motion } from '../../components/play/motion/Motion'
 import { State } from './State'
 
