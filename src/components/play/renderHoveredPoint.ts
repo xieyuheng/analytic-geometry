@@ -1,4 +1,3 @@
-import colors from 'tailwindcss/colors'
 import { numberOmitAfterFloatPoint } from '../../utils/numberOmitAfterFloatPoint'
 import { State } from './State'
 import { adjustCamera } from './camera/adjustCamera'
@@ -37,7 +36,7 @@ export function renderHoveredPoint(
 
   state.ctx.beginPath()
   state.ctx.strokeStyle = 'black'
-  state.ctx.lineWidth = 1 / 20
+  state.ctx.lineWidth = 1 / state.camera.scale
   state.ctx.strokeRect(x, y, boxWidth, boxHeight)
 
   state.ctx.fillStyle = 'hsla(0, 100%, 100%, 50%)'
@@ -51,7 +50,7 @@ export function renderHoveredPoint(
   })
 
   state.ctx.fillStyle = 'black'
-  state.ctx.arc(x, y, 0.13, 0, Math.PI * 2)
+  state.ctx.arc(x, y, 3 / state.camera.scale, 0, Math.PI * 2)
   state.ctx.fill()
 
   state.ctx.restore()

@@ -9,7 +9,7 @@ export function renderCamera(state: State): void {
   moveToCamera(state)
 
   state.ctx.strokeStyle = 'hsla(20, 100%, 50%, 50%)'
-  state.ctx.lineWidth = 1 / 20
+  state.ctx.lineWidth = 1.5 / state.camera.scale
 
   state.ctx.beginPath()
   state.ctx.moveTo(0, 0)

@@ -9,7 +9,10 @@ export function renderMotion(state: State, id: string, motion: Motion): void {
   adjustCamera(state)
 
   state.ctx.strokeStyle = motion.color || 'black'
-  state.ctx.lineWidth = id === state.hoveredPoint?.id ? 1 / 12 : 1 / 20
+  state.ctx.lineWidth =
+    id === state.hoveredPoint?.id
+      ? 2 / state.camera.scale
+      : 1.5 / state.camera.scale
 
   const precision = motion.precision || 0.1
 

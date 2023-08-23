@@ -7,7 +7,7 @@ export function renderCoordinate(state: State): void {
   const [width, height] = adjustCamera(state)
 
   state.ctx.strokeStyle = 'black'
-  state.ctx.lineWidth = 1 / 30
+  state.ctx.lineWidth = 1 / state.camera.scale
 
   for (
     let x = Math.floor(-width / 2) + state.camera.position[0];

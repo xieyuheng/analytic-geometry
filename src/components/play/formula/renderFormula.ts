@@ -13,13 +13,20 @@ export function renderFormula(
   const [width] = adjustCamera(state)
 
   state.ctx.strokeStyle = formula.color || 'black'
-  state.ctx.lineWidth = id === state.hoveredPoint?.id ? 1 / 12 : 1 / 20
+  state.ctx.lineWidth =
+    id === state.hoveredPoint?.id
+      ? 2 / state.camera.scale
+      : 1.5 / state.camera.scale
   const precision = formula.precision || 0.1
 
   let xmin = 0
   let ymin = 0
   let distance = Infinity
-  for (let x = -width / 2 + state.camera.position[0]; x < width / 2 + 1 + state.camera.position[0]; x += precision) {
+  for (
+    let x = -width / 2 + state.camera.position[0];
+    x < width / 2 + 1 + state.camera.position[0];
+    x += precision
+  ) {
     const x0 = x
     const x1 = x + precision
     const y0 = formula.f(x0)
