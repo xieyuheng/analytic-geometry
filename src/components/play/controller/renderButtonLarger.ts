@@ -20,14 +20,14 @@ export function renderButtonLarger(
   state.ctx.arc(
     (lowX + highX) / 2,
     (lowY + highY) / 2,
-    size * 0.4,
+    size * 0.47,
     0,
     2 * Math.PI,
   )
   state.ctx.stroke()
   state.ctx.fill()
 
-  const length = 8
+  const length = 9
   state.ctx.moveTo((lowX + highX) / 2, (lowY + highY) / 2)
   state.ctx.lineTo((lowX + highX) / 2, (lowY + highY) / 2 + length)
   state.ctx.moveTo((lowX + highX) / 2, (lowY + highY) / 2)

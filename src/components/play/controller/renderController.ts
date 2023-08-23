@@ -3,6 +3,7 @@ import { renderButtonDown } from './renderButtonDown'
 import { renderButtonLarger } from './renderButtonLarger'
 import { renderButtonLeft } from './renderButtonLeft'
 import { renderButtonRight } from './renderButtonRight'
+import { renderButtonSmaller } from './renderButtonSmaller'
 import { renderButtonUp } from './renderButtonUp'
 
 export function renderController(state: State): void {
@@ -17,6 +18,7 @@ export function renderController(state: State): void {
   renderButtonLeft(state, { size })
   renderButtonRight(state, { size })
   renderButtonLarger(state, { size })
+  renderButtonSmaller(state, { size })
 
   state.ctx.restore()
 }
