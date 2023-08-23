@@ -1,7 +1,5 @@
 # play
 
-[play] `updateHovered` handle `overCameraButtons`
+[play] render label with simple color
 [play] be able to scale camera
-[play] `renderMotion` -- show motion in time
-[play] click a motion to replay it
-[play] be able to controller the play of motion
+[play] click a motion -- be able to controller the play of motion

@@ -19,7 +19,7 @@ export function renderFormula(
   let xmin = 0
   let ymin = 0
   let distance = Infinity
-  for (let x = -width / 2; x < width / 2 + 1; x += precision) {
+  for (let x = -width / 2 + state.camera.position[0]; x < width / 2 + 1 + state.camera.position[0]; x += precision) {
     const x0 = x
     const x1 = x + precision
     const y0 = formula.f(x0)
