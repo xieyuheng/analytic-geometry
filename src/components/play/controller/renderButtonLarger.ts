@@ -1,4 +1,5 @@
 import { State } from '../State'
+import { Rect } from '../button/Rect'
 
 export function renderButtonLarger(
   state: State,
@@ -40,8 +41,10 @@ export function renderButtonLarger(
 
   state.ctx.restore()
 
+  const rect: Rect = [lowX, lowY, highX - lowX, highY - lowY]
+
   state.overCameraButtons.set('Larger', {
-    boxRegion: { lowX, lowY, highX, highY },
+    rect,
     handler: (state) => {
       state.camera.scale *= 1.1
     },

@@ -1,7 +1,7 @@
 import { State } from '../State'
-import { BoxRegion } from './BoxRegion'
+import { Rect } from './Rect'
 
 export type Button = {
-  boxRegion: BoxRegion
+  rect: Rect
   handler: (state: State) => void
 }

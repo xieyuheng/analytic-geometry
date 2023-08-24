@@ -1,4 +1,5 @@
 import { State } from '../State'
+import { Rect } from '../button/Rect'
 
 export function renderButtonSmaller(
   state: State,
@@ -36,8 +37,10 @@ export function renderButtonSmaller(
 
   state.ctx.restore()
 
+  const rect: Rect = [lowX, lowY, highX - lowX, highY - lowY]
+
   state.overCameraButtons.set('Smaller', {
-    boxRegion: { lowX, lowY, highX, highY },
+    rect,
     handler: (state) => {
       if (state.camera.scale >= 5) {
         state.camera.scale /= 1.1

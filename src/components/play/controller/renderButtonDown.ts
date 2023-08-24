@@ -1,4 +1,5 @@
 import { State } from '../State'
+import { Rect } from '../button/Rect'
 
 export function renderButtonDown(
   state: State,
@@ -27,8 +28,10 @@ export function renderButtonDown(
 
   state.ctx.restore()
 
+  const rect: Rect = [lowX, lowY, highX - lowX, highY - lowY]
+
   state.overCameraButtons.set('Down', {
-    boxRegion: { lowX, lowY, highX, highY },
+    rect,
     handler: (state) => {
       state.camera.position[1] -= 30 / state.camera.scale
     },

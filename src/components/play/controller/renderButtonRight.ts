@@ -1,4 +1,5 @@
 import { State } from '../State'
+import { Rect } from '../button/Rect'
 
 export function renderButtonRight(
   state: State,
@@ -27,10 +28,12 @@ export function renderButtonRight(
 
   state.ctx.restore()
 
+  const rect: Rect = [lowX, lowY, highX - lowX, highY - lowY]
+
   state.overCameraButtons.set('Right', {
-    boxRegion: { lowX, lowY, highX, highY },
+    rect,
     handler: (state) => {
-      state.camera.position[0]+= 30 / state.camera.scale
+      state.camera.position[0] += 30 / state.camera.scale
     },
   })
 }

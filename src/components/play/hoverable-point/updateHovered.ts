@@ -1,11 +1,11 @@
 import { State } from '../State'
-import { withinBoxRegion } from '../button/withinBoxRegion'
+import { withinRect } from '../button/withinRect'
 
 export function updateHovered(state: State): void {
   state.hoveredPoint = undefined
 
   for (const button of state.overCameraButtons.values()) {
-    if (withinBoxRegion(button.boxRegion, state.mouse.position)) {
+    if (withinRect(button.rect, state.mouse.position)) {
       return
     }
   }
