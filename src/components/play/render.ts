@@ -27,10 +27,12 @@ export function render(state: State, passedTime?: number): void {
   }
 
   const clickPeriod = 120
-  if (state.mouse.isDown && state.clickCoollingTimer <= 0) {
-    onClick(state)
-    state.clickCoollingTimer = clickPeriod
-  } else if (state.clickCoollingTimer > 0) {
+  if (state.clickCoollingTimer <= 0) {
+    if (state.mouse.isDown) {
+      onClick(state)
+      state.clickCoollingTimer = clickPeriod
+    }
+  } else {
     state.clickCoollingTimer -= deltaTime
   }
 
