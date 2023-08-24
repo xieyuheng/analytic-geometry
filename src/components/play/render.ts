@@ -2,11 +2,11 @@ import { State } from './State'
 import { renderCamera } from './camera/renderCamera'
 import { renderController } from './controller/renderController'
 import { renderFormula } from './formula/renderFormula'
-import { updateHovered } from './hoverable-point/updateHovered'
+import { renderHoveredPoint } from './hoverable-point/renderHoveredPoint'
+import { updateHoveredPoint } from './hoverable-point/updateHoveredPoint'
 import { renderMotion } from './motion/renderMotion'
 import { onClick } from './mouse/onClick'
 import { renderCoordinate } from './renderCoordinate'
-import { renderHoveredPoint } from './renderHoveredPoint'
 import { renderInfo } from './renderInfo'
 
 export function render(state: State, passedTime?: number): void {
@@ -34,7 +34,7 @@ export function render(state: State, passedTime?: number): void {
     state.clickCoollingTimer -= deltaTime
   }
 
-  updateHovered(state)
+  updateHoveredPoint(state)
   if (state.hoveredPoint) {
     renderHoveredPoint(state, state.hoveredPoint)
   }

@@ -1,7 +1,7 @@
 import { State } from '../State'
 import { withinRect } from '../button/withinRect'
 
-export function updateHovered(state: State): void {
+export function updateHoveredPoint(state: State): void {
   state.hoveredPoint = undefined
 
   for (const button of state.overCameraButtons.values()) {

@@ -1,8 +1,8 @@
-import { numberOmitAfterFloatPoint } from '../../utils/numberOmitAfterFloatPoint'
-import { State } from './State'
-import { adjustCamera } from './camera/adjustCamera'
-import { HoverablePoint } from './hoverable-point/HoverablePoint'
-import { drawText } from './utils/drawText'
+import { numberOmitAfterFloatPoint } from '../../../utils/numberOmitAfterFloatPoint'
+import { State } from '../State'
+import { adjustCamera } from '../camera/adjustCamera'
+import { drawText } from '../utils/drawText'
+import { HoverablePoint } from './HoverablePoint'
 
 export function renderHoveredPoint(
   state: State,
