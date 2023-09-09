@@ -9,8 +9,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "check:vue": "vue-tsc --noEmit",
-    "check:vue:watch": "vue-tsc --noEmit --watch",
+    "check": "vue-tsc --noEmit",
+    "check:watch": "vue-tsc --noEmit --watch",
     "check:ts": "tsc --noEmit",
     "check:ts:watch": "tsc --noEmit --watch",
     "test": "vitest --run",
