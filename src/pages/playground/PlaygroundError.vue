@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-col h-full w-full overflow-auto p-3">
+  <div class="flex h-full w-full flex-col overflow-auto p-3">
     <pre class="text-sm md:text-base" v-html="errorMessage"></pre>
   </div>
 </template>

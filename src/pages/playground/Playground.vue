@@ -35,19 +35,16 @@ watch(
 
 <template>
   <div
-    class="flex overflow-auto h-screen-dynamic flex-col dark:bg-stone-800 dark:text-white"
+    class="h-screen-dynamic flex flex-col overflow-auto dark:bg-stone-800 dark:text-white"
   >
-    <div
-      v-if="state"
-      class="flex flex-col h-full md:overflow-auto md:flex-row"
-    >
+    <div v-if="state" class="flex h-full flex-col md:flex-row md:overflow-auto">
       <div
-        class="flex flex-col overflow-auto md:w-1/3 h-full md:min-h-full min-h-[23rem]"
+        class="flex h-full min-h-[23rem] flex-col overflow-auto md:min-h-full md:w-1/3"
       >
         <div
-          class="border-b flex justify-between border-b flex-wrap dark:border-white border-black px-3 py-2"
+          class="flex flex-wrap justify-between border-b border-b border-black px-3 py-2 dark:border-white"
         >
-          <div class="font-bold text-xl pr-3">Analytic Geometry</div>
+          <div class="pr-3 text-xl font-bold">Analytic Geometry</div>
           <PlaygroundToolbar :state="state" />
         </div>
 
@@ -55,7 +52,7 @@ watch(
       </div>
 
       <div
-        class="md:border-l md:border-t-0 border-t grow-1 flex flex-col md:min-h-full min-h-[23rem] overflow-auto h-full border-black dark:border-white md:w-2/3"
+        class="grow-1 flex h-full min-h-[23rem] flex-col overflow-auto border-t border-black dark:border-white md:min-h-full md:w-2/3 md:border-l md:border-t-0"
       >
         <PlaygroundPlay v-if="state.kind === 'Play'" :state="state" />
 

@@ -15,7 +15,7 @@ export function renderCamera(state: State): void {
   state.ctx.beginPath()
   state.ctx.moveTo(0, 0)
   state.ctx.lineTo(0, 15 * unit)
-    state.ctx.moveTo(0, 0)
+  state.ctx.moveTo(0, 0)
   state.ctx.lineTo(0, -15 * unit)
   state.ctx.moveTo(0, 0)
   state.ctx.lineTo(15 * unit, 0)

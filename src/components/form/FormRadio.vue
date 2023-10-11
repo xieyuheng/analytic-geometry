@@ -12,7 +12,7 @@ defineEmits<{
 
 <template>
   <div class="flex flex-col">
-    <div class="font-ui py-2">
+    <div class="py-2 font-ui">
       <slot name="label" />
     </div>
 
@@ -26,7 +26,7 @@ defineEmits<{
       >
         <input
           type="radio"
-          class="disabled:bg-stone-100 dark:disabled:bg-stone-700 hidden"
+          class="hidden disabled:bg-stone-100 dark:disabled:bg-stone-700"
           :id="entry.value"
           :name="name"
           :value="entry.value"
@@ -37,7 +37,7 @@ defineEmits<{
 
         <label
           :for="entry.value"
-          class="font-ui flex space-x-2 items-center shrink-0"
+          class="flex shrink-0 items-center space-x-2 font-ui"
         >
           <pre v-if="entry.value === modelValue" class="font-code text-sm">{{
             '[x]'

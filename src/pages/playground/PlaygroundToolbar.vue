@@ -46,7 +46,7 @@ async function share() {
     <a
       target="_blank"
       href="https://github.com/xieyuheng/analytic-geometry"
-      class="text-xl hover:underline underline-offset-4 decoration-2"
+      class="text-xl decoration-2 underline-offset-4 hover:underline"
     >
       <Lang>
         <template #zh> 文档 </template>
@@ -55,7 +55,7 @@ async function share() {
     </a>
 
     <button
-      class="text-xl hover:underline underline-offset-4 decoration-2"
+      class="text-xl decoration-2 underline-offset-4 hover:underline"
       @click="share()"
     >
       <Lang>
@@ -65,7 +65,7 @@ async function share() {
     </button>
 
     <button
-      class="text-xl hover:underline underline-offset-4 decoration-2"
+      class="text-xl decoration-2 underline-offset-4 hover:underline"
       @click="run()"
     >
       <Lang class="inline">
